@@ -189,7 +189,7 @@
 						                  	</div>
 						                  	<div class="box-footer pull-right">
 							                    <input type="reset" class="btn btn-default" value="Batal">
-							                    <input type="submit" name="submit" class="btn btn-info" value="Submit">
+							                    <input type="submit" name="submit" class="btn btn-info" value="Simpan">
 						                  	</div>
 						                </div>
 					              	</form>

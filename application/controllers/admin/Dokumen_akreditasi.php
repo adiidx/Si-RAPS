@@ -13,20 +13,6 @@ class Dokumen_akreditasi extends CI_Controller {
 
     public function index()
     {
-        $data['title']      = 'Dokumen Akreditasi - Si-RAPS';
-        $data['header']     = 'Dokumen Akreditasi';
-        $data['sidebar']    = '
-                                <li class="active">
-                                    <a href="#"><i class="fas fa-folder-open"></i> <span>Dokumen Akreditasi</span></a>
-                                </li>
-                                <li>
-                                    <a href="'.base_url().'admin/kelola_user"><i class="fas fa-user-cog"></i> <span>Kelola User</span></a>
-                                </li>
-                                <li>
-                                    <a href="'.base_url().'admin/akun"><i class="fas fa-user-circle"></i> <span>Akun</span></a>
-                                </li>';
-        $data['data_user']  = '';
-
-        $this->load->view("si-raps/index", $data);       
+        $this->load->view("admin/dokumen_akreditasi");       
     }
 }

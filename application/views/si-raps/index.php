@@ -77,7 +77,7 @@
 		  	</section>
 		  	<section class="content">
 		   		<div class="row">
-		     		<?= $data_user ?>
+		   			
 		   		</div>
 		  	</section>
 		</div>

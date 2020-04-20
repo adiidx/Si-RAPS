@@ -13,19 +13,55 @@ class Akun extends CI_Controller {
 
     public function index()
     {
-        $data['title']      = 'Akun - Si-RAPS';
-        $data['header']     = 'Akun';
-        $data['sidebar']    = '
-                                <li>
-                                    <a href="'.base_url().'tim_akreditasi/dokumen_akreditasi"><i class="fas fa-folder-open"></i> <span>Dokumen Akreditasi</span></a>
-                                </li>
-                                <li>
-                                    <a href="'.base_url().'tim_akreditasi/kelola_dokumen"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
-                                </li>
-                                <li class="active">
-                                    <a href="#"><i class="fas fa-user-circle"></i> <span>Akun</span></a>
-                                </li>';
+        $this->load->model('m_akun');
 
-        $this->load->view("si-raps/index", $data);      
+        $id_user = $this->session->userdata("user_id");
+
+        $data['data_user']  = $this->m_akun->tampil_user($id_user);
+
+        $this->load->view("tim_akreditasi/akun", $data);       
+    }
+
+    public function edit_profil()
+    {
+        $this->load->model('m_akun');
+
+        $id_user = $this->session->userdata("user_id");
+
+        $data = array(
+            'data_user' => $this->m_akun->edit_profil($id_user)
+        );
+
+        $this->load->view('tim_akreditasi/edit_profil', $data);
+    }
+
+    public function update_profil()
+    {
+        $this->load->model('m_akun');
+
+        $id_user['id_user']         = $this->input->post("id_user");
+        $nama                       = $this->input->post('fnama');
+        $nidn                       = $this->input->post('fnidn');
+        $jabatan                    = $this->input->post('fjabatan');
+        $penanggungjawab_standar    = $this->input->post('fpenanggungjawab_standar');
+        $homebase                   = $this->input->post('fhomebase');
+        $username                   = $this->input->post('fusername');
+        $password                   = $this->input->post('fpassword');
+        $level                      = $this->input->post('flevel');
+
+        $data = array(
+            'nama'                     => $nama,
+            'nidn'                     => $nidn,
+            'jabatan'                  => $jabatan,
+            'penanggungjawab_standar'  => $penanggungjawab_standar,
+            'homebase'                 => $homebase,
+            'username'                 => $username,
+            'password'                 => $password,
+            'level'                    => $level    
+        );
+  
+        $this->m_akun->update_profil($data, $id_user);
+
+        redirect('tim_akreditasi/akun');
     }
 }

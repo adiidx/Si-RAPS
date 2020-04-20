@@ -26,7 +26,7 @@ class Login extends CI_Controller {
 
             if ($this->form_validation->run() == TRUE) {
                 $username = $this->input->post("username", TRUE);
-                $password = MD5($this->input->post('password', TRUE));
+                $password = $this->input->post("password", TRUE);
 
                 $checking = $this->m_login->cek_login('user', array('username' => $username), array('password' => $password));
 

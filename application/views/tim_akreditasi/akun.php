@@ -64,10 +64,10 @@
 		 		<ul class="sidebar-menu" data-widget="tree">
 		  			<li class="header">MAIN NAVIGATION</li>
 		 			<li>
-						<a href="<?php echo base_url() ?>admin/dokumen_akreditasi"><i class="fas fa-folder-open"></i> <span>Dokumen Akreditasi</span></a>
+						<a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi"><i class="fas fa-folder-open"></i> <span>Dokumen Akreditasi</span></a>
 					</li>
 					<li>
-						<a href="<?php echo base_url() ?>admin/kelola_user"><i class="fas fa-user-cog"></i> <span>Kelola User</span></a>
+						<a href="<?php echo base_url() ?>tim_akreditasi/kelola_dokumen"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 					</li>
 					<li class="active">
 						<a href="#"><i class="fas fa-user-circle"></i> <span>Akun</span></a>
@@ -98,7 +98,7 @@
 				            </div>
 				          	<div class="box-body">
 					            <div class="row">
-					              	<form class="form-horizontal" method="POST" action="<?php echo base_url() ?>admin/akun/edit_profil">
+					              	<form class="form-horizontal" method="POST" action="<?php echo base_url() ?>tim_akreditasi/akun/edit_profil">
 					                	<div class="col-md-12">
 					                		<h4 style="text-align:center;"><i class="fas fa-id-card"></i> Informasi Pribadi</h4><hr>
 					                  		<div class="box-body">

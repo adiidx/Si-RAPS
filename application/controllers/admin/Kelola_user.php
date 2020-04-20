@@ -82,14 +82,14 @@ class Kelola_user extends CI_Controller {
         $level                      = $this->input->post('flevel');
 
         $data = array(
-             'nama'                     => $nama,
-             'nidn'                     => $nidn,
-             'jabatan'                  => $jabatan,
-             'penanggungjawab_standar'  => $penanggungjawab_standar,
-             'homebase'                 => $homebase,
-             'username'                 => $username,
-             'password'                 => $password,
-             'level'                    => $level    
+            'nama'                     => $nama,
+            'nidn'                     => $nidn,
+            'jabatan'                  => $jabatan,
+            'penanggungjawab_standar'  => $penanggungjawab_standar,
+            'homebase'                 => $homebase,
+            'username'                 => $username,
+            'password'                 => $password,
+            'level'                    => $level    
         );
   
         $this->m_kelola_user->update_user($data, $id_user);
