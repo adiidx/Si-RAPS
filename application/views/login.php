@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="<?php echo base_url().'assets/img/mini-logo-si-raps.png'?>">
+  <link rel="shortcut icon" href="<?php echo base_url().'assets/img/logo-si-raps-37x37.png'?>">
   <title>User Authentication - Si-RAPS</title>   
   <link rel="stylesheet" href="<?php echo base_url().'assets/bootstrap/css/bootstrap.css'?>">
   <link rel="stylesheet" href="<?php echo base_url().'assets/fontawesome/css/all.css'?>">
@@ -23,7 +23,7 @@
       </div>
       <?php if(isset($error)) { echo $error; }; ?>
       <div class="card-body">
-        <form method="POST" action="<?php echo base_url() ?>index.php/login">
+        <form method="POST" action="<?php echo base_url() ?>login">
           <div class="input-group form-group">
             <div class="input-group-prepend">
               <span class="input-group-text"><i class="fas fa-user"></i></span>

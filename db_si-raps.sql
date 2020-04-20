@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 17, 2020 at 06:57 PM
+-- Generation Time: Apr 20, 2020 at 10:51 AM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -48,8 +48,8 @@ CREATE TABLE `user` (
   `nama` varchar(50) NOT NULL,
   `nidn` varchar(11) NOT NULL,
   `jabatan` varchar(20) NOT NULL,
-  `penangungjawab_standar` varchar(2) DEFAULT NULL,
-  `homebase` varchar(25) NOT NULL,
+  `penanggungjawab_standar` varchar(2) NOT NULL,
+  `homebase` varchar(30) NOT NULL,
   `username` varchar(20) NOT NULL,
   `password` varchar(32) NOT NULL,
   `level` varchar(15) NOT NULL
@@ -59,10 +59,15 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id_user`, `nama`, `nidn`, `jabatan`, `penangungjawab_standar`, `homebase`, `username`, `password`, `level`) VALUES
-(1, 'Administrator', '', '', '', '', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Admin'),
-(2, 'Hadi Sucipto, S.Kom., M.Kom.', '0705036801', 'Tenaga Pengajar', '1', 'D3 Sistem Informasi', 'tim', 'b15d47e99831ee63e3f47cf3d4478e9a', 'Tim Akreditasi'),
-(3, 'Aries Dwi Indriyanti, S.Kom., M.Kom.', '0021028109', 'Ketua Program Studi', '', 'S1 Teknik Informatika', 'kaprodi', '3c13922905d2bc454cc35e665335e2fd', 'Kaprodi');
+INSERT INTO `user` (`id_user`, `nama`, `nidn`, `jabatan`, `penanggungjawab_standar`, `homebase`, `username`, `password`, `level`) VALUES
+(1, 'Hery Kristianto', '-', 'Kepala Tata Usaha', '-', 'Fakultas Teknologi Informasi', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Admin'),
+(2, 'M. Fatkhur Rizal', '-', 'Staf Tata Usaha', '-', 'Fakultas Teknologi Informasi', 'admin2', '21232f297a57a5a743894a0e4a801fc3', 'Admin'),
+(3, 'Aries Dwi Indriyanti', '0021028109', 'Ketua Program Studi', '-', 'S1 Teknik Informatika', 'kaprodi', '3c13922905d2bc454cc35e665335e2fd', 'Kaprodi'),
+(4, 'Radityo Wiratsongko', '0719028005', 'Tenaga Pengajar', '1', 'S1 Teknik Informatika', 'tim', 'b15d47e99831ee63e3f47cf3d4478e9a', 'Tim Akreditasi'),
+(5, 'Mahrus Ali', '0716068601', 'Tenaga Pengajar', '2', 'S1 Teknik Informatika', 'tim2', 'b15d47e99831ee63e3f47cf3d4478e9a', 'Tim Akreditasi'),
+(6, 'Indana Lazulfa', '0729079101', 'Tenaga Pengajar', '3', 'S1 Teknik Informatika', 'tim3', 'b15d47e99831ee63e3f47cf3d4478e9a', 'Tim Akreditasi'),
+(7, 'Iftitaahul Mufarrihah', '0720059002', 'Tenaga Pengajar', '4', 'S1 Teknik Informatika', 'tim4', 'b15d47e99831ee63e3f47cf3d4478e9a', 'Tim Akreditasi'),
+(8, 'Hadi Sucipto', '0705036801', 'Tenaga Pengajar', '5', 'D3 Sistem Informasi', 'tim5', 'b15d47e99831ee63e3f47cf3d4478e9a', 'Tim Akreditasi');
 
 --
 -- Indexes for dumped tables
@@ -94,7 +99,7 @@ ALTER TABLE `dokumen`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- Constraints for dumped tables
 --

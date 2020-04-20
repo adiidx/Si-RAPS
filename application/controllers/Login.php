@@ -5,9 +5,7 @@ class Login extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
-        //load library form validasi
         $this->load->library('form_validation');
-        //load model m_login
         $this->load->model('m_login');
     }
 
@@ -15,26 +13,23 @@ class Login extends CI_Controller {
     {
         if($this->m_login->is_logged_in())
         {
-            //jika memang session sudah terdaftar, maka redirect ke halaman dahsboard
             if($this->session->userdata("level") == "Admin"){
-                redirect('admin/dashboard/');
+                redirect('admin/dokumen_akreditasi/');
             }else if($this->session->userdata("level") == "Tim Akreditasi"){
-                redirect('tim_akreditasi/dashboard/');
+                redirect('tim_akreditasi/dokumen_akreditasi/');
             }else if($this->session->userdata("level") == "Kaprodi"){
-                redirect('kaprodi/dashboard/');
+                redirect('kaprodi/dokumen_akreditasi/');
             }
-        }else{ //jika session belum terdaftar
-            //set form validation
+        }else{
             $this->form_validation->set_rules('username', 'Username', 'required');
             $this->form_validation->set_rules('password', 'Password', 'required');
-            //cek validasi
+
             if ($this->form_validation->run() == TRUE) {
-                //get data dari FORM
                 $username = $this->input->post("username", TRUE);
                 $password = MD5($this->input->post('password', TRUE));
-                //checking data via model
-                $checking = $this->m_login->check_login('user', array('username' => $username), array('password' => $password));
-                //jika ditemukan, maka create session
+
+                $checking = $this->m_login->cek_login('user', array('username' => $username), array('password' => $password));
+
                 if ($checking != FALSE) {
                     foreach ($checking as $apps) {
                         $session_data = array(
@@ -44,15 +39,15 @@ class Login extends CI_Controller {
                             'user_nama' => $apps->nama,
                             'level'     => $apps->level
                         );
-                        //set session userdata
+
                         $this->session->set_userdata($session_data);
-                        //redirect berdasarkan level user
+
                         if($this->session->userdata("level") == "Admin"){
-                            redirect('admin/dashboard/');
+                            redirect('admin/dokumen_akreditasi/');
                         }else if($this->session->userdata("level") == "Tim Akreditasi"){
-                            redirect('tim_akreditasi/dashboard/');
+                            redirect('tim_akreditasi/dokumen_akreditasi/');
                         }else if($this->session->userdata("level") == "Kaprodi"){
-                            redirect('kaprodi/dashboard/');
+                            redirect('kaprodi/dokumen_akreditasi/');
                         }
                     }
                 }else{
@@ -63,5 +58,10 @@ class Login extends CI_Controller {
                 $this->load->view('login');
             }
         }
+    }
+    public function logout()
+    {
+        $this->session->sess_destroy();
+        redirect('login');
     }
 }
