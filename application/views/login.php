@@ -44,7 +44,8 @@
                 Hint (username | password) :<br>
                 - admin | admin<br>
                 - tim | tim<br>
-                - kaprodi | kaprodi
+                - kaprodi | kaprodi<br>
+                **Bagian ini akan dihapus jika sistem telah release
               </font>
             </div>
             <div>

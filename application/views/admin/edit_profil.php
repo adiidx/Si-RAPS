@@ -91,7 +91,7 @@
 					<div class="col-md-6">
 			          	<div class="box box-default">
 				            <div class="box-header with-border">
-				              	<h3 class="box-title"></h3>
+				              	<h3 class="box-title"><i class="fas fa-id-card"></i> Informasi Pribadi</h3>
 				              	<div class="box-tools pull-right">
 					                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
 					                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
@@ -101,19 +101,12 @@
 					            <div class="row">
 					              	<form class="form-horizontal" method="POST" action="<?php echo base_url() ?>admin/akun/update_profil">
 					                	<div class="col-md-12">
-					                		<h4 style="text-align:center;"><i class="fas fa-id-card"></i> Informasi Pribadi</h4><hr>
 					                  		<div class="box-body">
 					                    		<div class="form-group">
 					                      			<label class="col-sm-5 control-label" style="text-align: left;">Nama</label>
 					                      			<div class="col-sm-7">
 					                        			<input type="text" name="fnama" class="form-control" style="text-transform: capitalize;" value="<?php echo $data_user->nama ?>" required>
 					                        			<input type="hidden" name="id_user" value="<?php echo $data_user->id_user ?>">
-					                      			</div>
-					                    		</div>
-					                    		<div class="form-group">
-					                      			<label class="col-sm-5 control-label" style="text-align: left;">NIDN</label>
-					                      			<div class="col-sm-7">
-					                        			<input type="text" name="fnidn" minlength="10" maxlength="10" onkeypress="return hanyaAngka(event)" class="form-control" value="<?php echo $data_user->nidn ?>" readonly>
 					                      			</div>
 					                    		</div>
 							                    <div class="form-group">
@@ -123,16 +116,13 @@
 					                      			</div>
 							                    </div>
 							                    <div class="form-group">
-							                      	<label class="col-sm-5 control-label" style="text-align: left;">Penanggungjawab Standar</label>
-							                      	<div class="col-sm-7">
-					                        			<input type="text" name="fpenanggungjawab_standar" minlength="6" maxlength="20" class="form-control" value="<?php echo $data_user->penanggungjawab_standar ?>" readonly>
-					                      			</div>
-							                    </div>
-							                    <div class="form-group">
 							                      	<label class="col-sm-5 control-label" style="text-align: left;">Homebase</label>
 							                      	<div class="col-sm-7">
 					                        			<input type="text" name="fhomebase" minlength="6" maxlength="20" class="form-control" value="<?php echo $data_user->homebase ?>" readonly>
 					                      			</div>
+							                    </div><br>
+							                    <div>
+							                      	<label class="control-label">&nbsp;&nbsp;&nbsp;</label>
 							                    </div>
 					                  		</div>
 					                	</div>
@@ -145,7 +135,7 @@
 				    <div class="col-md-4">
 			          	<div class="box box-default">
 				            <div class="box-header with-border">
-				              	<h3 class="box-title"></h3>
+				              	<h3 class="box-title"><i class="fas fa-user-circle"></i> Informasi Akun</h3>
 				              	<div class="box-tools pull-right">
 					                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
 					                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
@@ -154,7 +144,6 @@
 				          	<div class="box-body">
 					            <div class="row">
 						                <div class="col-md-12">
-						                	<h4 style="text-align:center;"><i class="fas fa-user-circle"></i> Informasi Akun</h4><hr>
 						                  	<div class="box-body">
 							                    <div class="form-group">
 							                      	<label class="col-sm-4 control-label" style="text-align: left;">Username</label>
@@ -173,9 +162,6 @@
 							                      	<div class="col-sm-8">
 					                        			<input type="text" name="flevel" minlength="6" maxlength="20" class="form-control" value="<?php echo $data_user->level ?>" readonly>
 					                      			</div>
-							                    </div><br><br>
-							                    <div>
-							                      	<label class="control-label">&nbsp;&nbsp;&nbsp;</label>
 							                    </div>
 						                  	</div>
 						                  	<div class="box-footer pull-right">

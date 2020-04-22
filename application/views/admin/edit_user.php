@@ -127,8 +127,10 @@
 							                      	<div class="col-sm-8">
 								                        <select name="fjabatan" class="form-control" required>
 								                          	<option value="">-- Jabatan --</option>
-								                          	<option value="Ketua Program Studi">Ketua Program Studi</option>
-								                          	<option value="Tenaga Pengajar">Tenaga Pengajar</option>
+								                          	<option value="Ketua Program Studi" <?php echo ($data_user->jabatan == 'Ketua Program Studi' ? ' selected' : ''); ?>>Ketua Program Studi</option>
+								                          	<option value="Tenaga Pengajar" <?php echo ($data_user->jabatan == 'Tenaga Pengajar' ? ' selected' : ''); ?>>Tenaga Pengajar</option>
+								                          	<option value="Kepala Tata Usaha" <?php echo ($data_user->jabatan == 'Kepala Tata Usaha' ? ' selected' : ''); ?>>Kepala Tata Usaha</option>
+								                          	<option value="Staf Tata Usaha" <?php echo ($data_user->jabatan == 'Staf Tata Usaha' ? ' selected' : ''); ?>>Staf Tata Usaha</option>
 								                        </select>
 							                      	</div>
 							                    </div>
@@ -137,15 +139,16 @@
 							                      	<div class="col-sm-8">
 								                        <select name="fpenanggungjawab_standar" class="form-control" required>
 								                          	<option value="">-- Penanggungjawab Standar --</option>
-								                          	<option value="1">1. Visi, Misi, Tujuan, dan Strategi</option>
-								                          	<option value="2">2. Tata Pamong, Tata Kelola, dan Kerjasama</option>
-								                          	<option value="3">3. Mahasiswa</option>
-								                          	<option value="4">4. Sumber Daya Manusia</option>
-								                          	<option value="5">5. Keuangan, Sarana, dan Prasarana</option>
-								                          	<option value="6">6. Pendidikan</option>
-								                          	<option value="7">7. Penelitian</option>
-								                          	<option value="8">8. Pengabdian kepada Masyarakat</option>
-								                          	<option value="9">9. Luaran dan Capaian Tridharma</option>
+								                          	<option value="1" <?php echo ($data_user->penanggungjawab_standar == '1' ? ' selected' : ''); ?>>1. Visi, Misi, Tujuan, dan Strategi</option>
+								                          	<option value="2"<?php echo ($data_user->penanggungjawab_standar == '2' ? ' selected' : ''); ?>>2. Tata Pamong, Tata Kelola, dan Kerjasama</option>
+								                          	<option value="3"<?php echo ($data_user->penanggungjawab_standar == '3' ? ' selected' : ''); ?>>3. Mahasiswa</option>
+								                          	<option value="4"<?php echo ($data_user->penanggungjawab_standar == '4' ? ' selected' : ''); ?>>4. Sumber Daya Manusia</option>
+								                          	<option value="5"<?php echo ($data_user->penanggungjawab_standar == '5' ? ' selected' : ''); ?>>5. Keuangan, Sarana, dan Prasarana</option>
+								                          	<option value="6"<?php echo ($data_user->penanggungjawab_standar == '6' ? ' selected' : ''); ?>>6. Pendidikan</option>
+								                          	<option value="7"<?php echo ($data_user->penanggungjawab_standar == '7' ? ' selected' : ''); ?>>7. Penelitian</option>
+								                          	<option value="8"<?php echo ($data_user->penanggungjawab_standar == '8' ? ' selected' : ''); ?>>8. Pengabdian kepada Masyarakat</option>
+								                          	<option value="9"<?php echo ($data_user->penanggungjawab_standar == '9' ? ' selected' : ''); ?>>9. Luaran dan Capaian Tridharma</option>
+								                          	<option value="-"<?php echo ($data_user->penanggungjawab_standar == '-' ? ' selected' : ''); ?>>-</option>
 								                        </select>
 							                      	</div>
 							                    </div>
@@ -154,9 +157,10 @@
 							                      	<div class="col-sm-8">
 								                        <select name="fhomebase" class="form-control" required>
 								                          	<option value="">-- Homebase --</option>
-								                          	<option value="S1 Teknik Informatika">S1 Teknik Informatika</option>
-								                          	<option value="S1 Sistem Informasi">S1 Sistem Informasi</option>
-								                          	<option value="D3 Sistem Informasi">D3 Sistem Informasi</option>
+								                          	<option value="S1 Teknik Informatika" <?php echo ($data_user->homebase == 'S1 Teknik Informatika' ? ' selected' : ''); ?>>S1 Teknik Informatika</option>
+								                          	<option value="S1 Sistem Informasi" <?php echo ($data_user->homebase == 'S1 Sistem Informasi' ? ' selected' : ''); ?>>S1 Sistem Informasi</option>
+								                          	<option value="D3 Sistem Informasi" <?php echo ($data_user->homebase == 'D3 Sistem Informasi' ? ' selected' : ''); ?>>D3 Sistem Informasi</option>
+								                          	<option value="Fakultas Teknologi Informasi" <?php echo ($data_user->homebase == 'Fakultas Teknologi Informasi' ? ' selected' : ''); ?>>Fakultas Teknologi Informasi</option>
 								                        </select>
 							                      	</div>
 							                    </div>
@@ -180,11 +184,21 @@
 							                    <div class="form-group">
 							                      	<label class="col-sm-4 control-label">Level</label>
 							                      	<div class="col-sm-8">
-								                        <select name="flevel" class="form-control" required>
-								                          	<option value="">-- Level --</option>
-								                          	<option value="Kaprodi">Kaprodi</option>
-								                          	<option value="Tim Akreditasi">Tim Akreditasi</option>
-								                        </select>
+								                    <?php
+								                        if($data_user->level == "Admin"){
+								                    ?>
+													        <input type="text" class="form-control" value="<?php echo $data_user->level ?>" readonly>
+													<?php
+													    }else{
+													?>
+													    	<select name="flevel" class="form-control" required>
+									                          	<option value="">-- Level --</option>
+														        <option value="Kaprodi" <?php echo ($data_user->level == 'Kaprodi' ? ' selected' : ''); ?>>Kaprodi</option>
+									                          	<option value="Tim Akreditasi" <?php echo ($data_user->level == 'Tim Akreditasi' ? ' selected' : ''); ?>>Tim Akreditasi</option>
+								                        	</select>
+								                    <?php
+													    }
+								                    ?>
 							                      	</div>
 							                    </div>
 						                  	</div>

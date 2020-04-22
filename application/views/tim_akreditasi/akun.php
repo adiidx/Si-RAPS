@@ -90,7 +90,7 @@
 					<div class="col-md-6">
 			          	<div class="box box-default">
 				            <div class="box-header with-border">
-				              	<h3 class="box-title"></h3>
+				              	<h3 class="box-title"><i class="fas fa-id-card"></i> Informasi Pribadi</h3>
 				              	<div class="box-tools pull-right">
 					                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
 					                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
@@ -100,7 +100,6 @@
 					            <div class="row">
 					              	<form class="form-horizontal" method="POST" action="<?php echo base_url() ?>tim_akreditasi/akun/edit_profil">
 					                	<div class="col-md-12">
-					                		<h4 style="text-align:center;"><i class="fas fa-id-card"></i> Informasi Pribadi</h4><hr>
 					                  		<div class="box-body">
 					                    		<div class="form-group">
 					                      			<label class="col-sm-5 control-label" style="text-align: left;">Nama</label>
@@ -146,7 +145,7 @@
 				    <div class="col-md-4">
 			          	<div class="box box-default">
 				            <div class="box-header with-border">
-				              	<h3 class="box-title"></h3>
+				              	<h3 class="box-title"><i class="fas fa-user-circle"></i> Informasi Akun</h3>
 				              	<div class="box-tools pull-right">
 					                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
 					                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
@@ -155,7 +154,6 @@
 				          	<div class="box-body">
 					            <div class="row">
 						                <div class="col-md-12">
-						                	<h4 style="text-align:center;"><i class="fas fa-user-circle"></i> Informasi Akun</h4><hr>
 						                  	<div class="box-body">
 							                    <div class="form-group">
 							                      	<label class="col-sm-4 control-label" style="text-align: left;">Username</label>

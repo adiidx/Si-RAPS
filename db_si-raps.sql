@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 20, 2020 at 10:51 AM
+-- Generation Time: Apr 20, 2020 at 08:46 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -60,14 +60,14 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `nama`, `nidn`, `jabatan`, `penanggungjawab_standar`, `homebase`, `username`, `password`, `level`) VALUES
-(1, 'Hery Kristianto', '-', 'Kepala Tata Usaha', '-', 'Fakultas Teknologi Informasi', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Admin'),
-(2, 'M. Fatkhur Rizal', '-', 'Staf Tata Usaha', '-', 'Fakultas Teknologi Informasi', 'admin2', '21232f297a57a5a743894a0e4a801fc3', 'Admin'),
-(3, 'Aries Dwi Indriyanti', '0021028109', 'Ketua Program Studi', '-', 'S1 Teknik Informatika', 'kaprodi', '3c13922905d2bc454cc35e665335e2fd', 'Kaprodi'),
-(4, 'Radityo Wiratsongko', '0719028005', 'Tenaga Pengajar', '1', 'S1 Teknik Informatika', 'tim', 'b15d47e99831ee63e3f47cf3d4478e9a', 'Tim Akreditasi'),
-(5, 'Mahrus Ali', '0716068601', 'Tenaga Pengajar', '2', 'S1 Teknik Informatika', 'tim2', 'b15d47e99831ee63e3f47cf3d4478e9a', 'Tim Akreditasi'),
-(6, 'Indana Lazulfa', '0729079101', 'Tenaga Pengajar', '3', 'S1 Teknik Informatika', 'tim3', 'b15d47e99831ee63e3f47cf3d4478e9a', 'Tim Akreditasi'),
-(7, 'Iftitaahul Mufarrihah', '0720059002', 'Tenaga Pengajar', '4', 'S1 Teknik Informatika', 'tim4', 'b15d47e99831ee63e3f47cf3d4478e9a', 'Tim Akreditasi'),
-(8, 'Hadi Sucipto', '0705036801', 'Tenaga Pengajar', '5', 'D3 Sistem Informasi', 'tim5', 'b15d47e99831ee63e3f47cf3d4478e9a', 'Tim Akreditasi');
+(1, 'Hery Kristianto', '-', 'Kepala Tata Usaha', '-', 'Fakultas Teknologi Informasi', 'admin', 'admin', 'Admin'),
+(2, 'M. Fatkhur Rizal', '-', 'Staf Tata Usaha', '-', 'Fakultas Teknologi Informasi', 'admin2', 'admin', 'Admin'),
+(3, 'Aries Dwi Indriyanti', '0021028109', 'Ketua Program Studi', '-', 'S1 Teknik Informatika', 'kaprodi', 'kaprodi', 'Kaprodi'),
+(4, 'Radityo Wiratsongko', '0719028005', 'Tenaga Pengajar', '1', 'S1 Teknik Informatika', 'tim', 'tim', 'Tim Akreditasi'),
+(5, 'Mahrus Ali', '0716068601', 'Tenaga Pengajar', '2', 'S1 Teknik Informatika', 'tim2', 'tim', 'Tim Akreditasi'),
+(6, 'Indana Lazulfa', '0729079101', 'Tenaga Pengajar', '3', 'S1 Teknik Informatika', 'tim3', 'tim', 'Tim Akreditasi'),
+(7, 'Iftitaahul Mufarrihah', '0720059002', 'Tenaga Pengajar', '4', 'S1 Teknik Informatika', 'tim4', 'tim', 'Tim Akreditasi'),
+(8, 'Hadi Sucipto', '0705036801', 'Tenaga Pengajar', '5', 'D3 Sistem Informasi', 'tim5', 'tim', 'Tim Akreditasi');
 
 --
 -- Indexes for dumped tables

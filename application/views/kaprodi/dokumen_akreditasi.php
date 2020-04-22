@@ -85,7 +85,7 @@
 		  	</section>
 		  	<section class="content">
 		   		<div class="row">
-		     		<!-- <div class="col-lg-4 col-xs-6">
+		     		<div class="col-lg-4 col-xs-6">
 		     			<div class="small-box bg-light-blue">
 		       				<div class="inner">
 		       					<h3>
@@ -210,7 +210,7 @@
 		         			</div>
 		         			<a href="#" class="small-box-footer">Lihat detail <i class="fa fa-arrow-circle-right"></i></a>
 		       			</div>
-		      		</div> -->
+		      		</div>
 		   		</div>
 		  	</section>
 		</div>

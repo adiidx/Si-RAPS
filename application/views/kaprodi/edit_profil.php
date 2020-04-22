@@ -80,7 +80,7 @@
 		  	<section class="content-header">
 		  		<h1>Edit Profil</h1>
 		     	<ol class="breadcrumb">
-		       		<li><a href="<?php echo base_url() ?>admin/akun"><i class="fa fa-tachometer-alt"></i> Akun</a></li>
+		       		<li><a href="<?php echo base_url() ?>kaprodi/akun"><i class="fa fa-tachometer-alt"></i> Akun</a></li>
 		       		<li class="active">Edit Profil</li>
 		     	</ol>
 		  	</section>
@@ -91,7 +91,7 @@
 					<div class="col-md-6">
 			          	<div class="box box-default">
 				            <div class="box-header with-border">
-				              	<h3 class="box-title"></h3>
+				              	<h3 class="box-title"><i class="fas fa-id-card"></i> Informasi Pribadi</h3>
 				              	<div class="box-tools pull-right">
 					                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
 					                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
@@ -101,7 +101,6 @@
 					            <div class="row">
 					              	<form class="form-horizontal" method="POST" action="<?php echo base_url() ?>kaprodi/akun/update_profil">
 					                	<div class="col-md-12">
-					                		<h4 style="text-align:center;"><i class="fas fa-id-card"></i> Informasi Pribadi</h4><hr>
 					                  		<div class="box-body">
 					                    		<div class="form-group">
 					                      			<label class="col-sm-5 control-label" style="text-align: left;">Nama</label>
@@ -113,7 +112,15 @@
 					                    		<div class="form-group">
 					                      			<label class="col-sm-5 control-label" style="text-align: left;">NIDN</label>
 					                      			<div class="col-sm-7">
-					                        			<input type="text" name="fnidn" minlength="10" maxlength="10" onkeypress="return hanyaAngka(event)" class="form-control" value="<?php echo $data_user->nidn ?>" readonly>
+					                        			<script>
+								                          	function hanyaAngka(evt){
+									                            var charCode = (evt.which) ? evt.which : event.keyCode
+									                            if (charCode > 31 && (charCode < 48 || charCode > 57))
+									                            return false;
+									                            return true;
+								                          	}
+								                        </script>
+					                        			<input type="text" name="fnidn" minlength="10" maxlength="10" onkeypress="return hanyaAngka(event)" class="form-control" value="<?php echo $data_user->nidn ?>" required>
 					                      			</div>
 					                    		</div>
 							                    <div class="form-group">
@@ -123,15 +130,15 @@
 					                      			</div>
 							                    </div>
 							                    <div class="form-group">
-							                      	<label class="col-sm-5 control-label" style="text-align: left;">Penanggungjawab Standar</label>
-							                      	<div class="col-sm-7">
-					                        			<input type="text" name="fpenanggungjawab_standar" minlength="6" maxlength="20" class="form-control" value="<?php echo $data_user->penanggungjawab_standar ?>" readonly>
-					                      			</div>
-							                    </div>
-							                    <div class="form-group">
 							                      	<label class="col-sm-5 control-label" style="text-align: left;">Homebase</label>
 							                      	<div class="col-sm-7">
-					                        			<input type="text" name="fhomebase" minlength="6" maxlength="20" class="form-control" value="<?php echo $data_user->homebase ?>" readonly>
+					                        			<select name="fhomebase" class="form-control" required>
+								                          	<option value="">-- Homebase --</option>
+								                          	<option value="S1 Teknik Informatika" <?php echo ($data_user->homebase == 'S1 Teknik Informatika' ? ' selected' : ''); ?>>S1 Teknik Informatika</option>
+								                          	<option value="S1 Sistem Informasi" <?php echo ($data_user->homebase == 'S1 Sistem Informasi' ? ' selected' : ''); ?>>S1 Sistem Informasi</option>
+								                          	<option value="D3 Sistem Informasi" <?php echo ($data_user->homebase == 'D3 Sistem Informasi' ? ' selected' : ''); ?>>D3 Sistem Informasi</option>
+								                          	<option value="Fakultas Teknologi Informasi" <?php echo ($data_user->homebase == 'Fakultas Teknologi Informasi' ? ' selected' : ''); ?>>Fakultas Teknologi Informasi</option>
+								                        </select>
 					                      			</div>
 							                    </div>
 					                  		</div>
@@ -145,7 +152,7 @@
 				    <div class="col-md-4">
 			          	<div class="box box-default">
 				            <div class="box-header with-border">
-				              	<h3 class="box-title"></h3>
+				              	<h3 class="box-title"><i class="fas fa-user-circle"></i> Informasi Akun</h3>
 				              	<div class="box-tools pull-right">
 					                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
 					                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
@@ -154,7 +161,6 @@
 				          	<div class="box-body">
 					            <div class="row">
 						                <div class="col-md-12">
-						                	<h4 style="text-align:center;"><i class="fas fa-user-circle"></i> Informasi Akun</h4><hr>
 						                  	<div class="box-body">
 							                    <div class="form-group">
 							                      	<label class="col-sm-4 control-label" style="text-align: left;">Username</label>
@@ -173,10 +179,7 @@
 							                      	<div class="col-sm-8">
 					                        			<input type="text" name="flevel" minlength="6" maxlength="20" class="form-control" value="<?php echo $data_user->level ?>" readonly>
 					                      			</div>
-							                    </div><br><br>
-							                    <div>
-							                      	<label class="control-label">&nbsp;&nbsp;&nbsp;</label>
-							                    </div>
+							                    </div><br>
 						                  	</div>
 						                  	<div class="box-footer pull-right">
 							                    <input type="submit" name="submit" class="btn btn-info" value="Simpan">
