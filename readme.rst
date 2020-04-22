@@ -8,5 +8,5 @@ Si-RAPS merupakan Sistem Repository untuk dokumen Akreditasi Program Studi pada 
 Informasi Rilis
 *******************
 
-Si-RAPS dilurncurkan berbasis web dan dapat diakses pada `Si-Raps <http://si-raps.online/>`_.
+Si-RAPS diluncurkan berbasis web dan dapat diakses pada `Si-Raps <http://si-raps.online/>`_.
 
