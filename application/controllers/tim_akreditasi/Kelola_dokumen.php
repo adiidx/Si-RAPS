@@ -57,7 +57,26 @@ class Kelola_dokumen extends CI_Controller {
             );
 
             $this->m_kelola_dokumen->simpan_dokumen($data);
-            redirect('tim_akreditasi/dokumen_akreditasi/standar_1');
+
+            if($this->session->userdata("pj_standar") == "1"){
+                redirect('tim_akreditasi/dokumen_akreditasi/standar_1');
+            }else if($this->session->userdata("pj_standar") == "2"){
+                redirect('tim_akreditasi/dokumen_akreditasi/standar_2');
+            }else if($this->session->userdata("pj_standar") == "3"){
+                redirect('tim_akreditasi/dokumen_akreditasi/standar_3');
+            }else if($this->session->userdata("pj_standar") == "4"){
+                redirect('tim_akreditasi/dokumen_akreditasi/standar_4');
+            }else if($this->session->userdata("pj_standar") == "5"){
+                redirect('tim_akreditasi/dokumen_akreditasi/standar_5');
+            }else if($this->session->userdata("pj_standar") == "6"){
+                redirect('tim_akreditasi/dokumen_akreditasi/standar_6');
+            }else if($this->session->userdata("pj_standar") == "7"){
+                redirect('tim_akreditasi/dokumen_akreditasi/standar_7');
+            }else if($this->session->userdata("pj_standar") == "8"){
+                redirect('tim_akreditasi/dokumen_akreditasi/standar_8');
+            }else if($this->session->userdata("pj_standar") == "9"){
+                redirect('tim_akreditasi/dokumen_akreditasi/standar_9');
+            }
         }
     }
 
@@ -98,9 +117,10 @@ class Kelola_dokumen extends CI_Controller {
             $path = $config['upload_path'].$data['data_dokumen']->nama_dokumen;
 
             $data = array(
-                'nama_dokumen'  => $data['data_dokumen']->nama_dokumen,
-                'path'          => $path,
-                'judul_dokumen' => $this->input->post('fjudul_dokumen')
+                'nama_dokumen'      => $data['data_dokumen']->nama_dokumen,
+                'path'              => $path,
+                'judul_dokumen'     => $this->input->post('fjudul_dokumen'),
+                'tanggal_upload'    => date("Y-m-d H:i:s")
             );
 
             $update = $this->m_kelola_dokumen->update_dokumen($id_dokumen, $data);
@@ -134,9 +154,10 @@ class Kelola_dokumen extends CI_Controller {
             $path = $config['upload_path'].$upload_data['file_name'];
 
             $data = array(
-                'nama_dokumen'  => $upload_data['file_name'],
-                'path'          => $path,
-                'judul_dokumen' => $this->input->post('fjudul_dokumen')
+                'nama_dokumen'      => $upload_data['file_name'],
+                'path'              => $path,
+                'judul_dokumen'     => $this->input->post('fjudul_dokumen'),
+                'tanggal_upload'    => date("Y-m-d H:i:s")
             );
 
             $update = $this->m_kelola_dokumen->update_dokumen($id_dokumen, $data);

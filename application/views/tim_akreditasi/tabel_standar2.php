@@ -89,7 +89,7 @@
 					        <th><strong>Author</strong></th>
 					        <th><strong>Tanggal Upload</strong></th>
 					        <th><strong>Status Dokumen</strong></th>
-					        <th><strong>Aksi</strong></th>
+					        <th width="50px"><strong>Aksi</strong></th>
 					    </tr>
 				    </thead>
 				    <tbody>

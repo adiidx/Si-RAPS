@@ -43,7 +43,7 @@
               <font color="white" size="2">
                 Hint (username | password) :<br>
                 - admin | admin<br>
-                - tim | tim<br>
+                - tim5 | tim<br>
                 - kaprodi | kaprodi<br>
                 **Bagian ini akan dihapus jika sistem telah release
               </font>
