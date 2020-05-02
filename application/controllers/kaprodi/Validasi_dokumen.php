@@ -11,21 +11,39 @@ class Validasi_dokumen extends CI_Controller {
         }
     }
 
-    public function index()
+    public function setujui_dokumen()
     {
-        $data['title']      = 'Validasi Dokumen - Si-RAPS';
-        $data['header']     = 'Validasi Dokumen';
-        $data['sidebar']    = '
-                                <li>
-                                    <a href="'.base_url().'kaprodi/dokumen_akreditasi"><i class="fas fa-folder-open"></i> <span>Dokumen Akreditasi</span></a>
-                                </li>
-                                <li class="active">
-                                    <a href="#"><i class="fas fa-file-signature"></i> <span>Validasi Dokumen</span></a>
-                                </li>
-                                <li>
-                                    <a href="'.base_url().'kaprodi/akun"><i class="fas fa-user-circle"></i> <span>Akun</span></a>
-                                </li>';
+        $this->load->model('m_validasi_dokumen');
 
-        $this->load->view("si-raps/index", $data);         
+        $id_dokumen['id_dokumen'] = $this->uri->segment(4);
+
+        $tanggal_validasi = date("Y-m-d H:i:s");
+
+        $datas = array(
+            'status_dokumen'    => "Telah Disetujui",
+            'tanggal_validasi'  => $tanggal_validasi
+        );
+  
+        $this->m_validasi_dokumen->update_status_dokumen($datas, $id_dokumen);
+
+        redirect($_SERVER['HTTP_REFERER']);
+    }
+
+    public function revisi_dokumen()
+    {
+        $this->load->model('m_validasi_dokumen');
+
+        $id_dokumen['id_dokumen'] = $this->uri->segment(4);
+
+        $tanggal_validasi = date("Y-m-d H:i:s");
+
+        $datas = array(
+            'status_dokumen'    => "Perlu Revisi",
+            'tanggal_validasi'  => $tanggal_validasi
+        );
+  
+        $this->m_validasi_dokumen->update_status_dokumen($datas, $id_dokumen);
+
+        redirect($_SERVER['HTTP_REFERER']);
     }
 }

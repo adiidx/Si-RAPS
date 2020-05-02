@@ -17,6 +17,7 @@ class Akun extends CI_Controller {
 
         $id_user = $this->session->userdata("user_id");
 
+        $data['title']      = 'Akun | Si-RAPS';
         $data['data_user']  = $this->m_akun->tampil_user($id_user);
 
         $this->load->view("admin/akun", $data);       
@@ -29,6 +30,7 @@ class Akun extends CI_Controller {
         $id_user = $this->session->userdata("user_id");
 
         $data = array(
+            'title'     => 'Edit Profil | Si-RAPS',
             'data_user' => $this->m_akun->edit_profil($id_user)
         );
 
@@ -50,14 +52,14 @@ class Akun extends CI_Controller {
         $level                      = $this->input->post('flevel');
 
         $data = array(
-            'nama'                     => $nama,
-            'nidn'                     => $nidn,
-            'jabatan'                  => $jabatan,
-            'penanggungjawab_standar'  => $penanggungjawab_standar,
-            'homebase'                 => $homebase,
-            'username'                 => $username,
-            'password'                 => $password,
-            'level'                    => $level    
+            'nama'                      => $nama,
+            'nidn'                      => $nidn,
+            'jabatan'                   => $jabatan,
+            'penanggungjawab_standar'   => $penanggungjawab_standar,
+            'homebase'                  => $homebase,
+            'username'                  => $username,
+            'password'                  => $password,
+            'level'                     => $level    
         );
   
         $this->m_akun->update_profil($data, $id_user);

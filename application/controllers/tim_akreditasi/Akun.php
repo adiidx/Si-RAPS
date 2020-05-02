@@ -17,6 +17,7 @@ class Akun extends CI_Controller {
 
         $id_user = $this->session->userdata("user_id");
 
+        $data['title']      = 'Akun | Si-RAPS';
         $data['data_user']  = $this->m_akun->tampil_user($id_user);
 
         $this->load->view("tim_akreditasi/akun", $data);       
@@ -29,6 +30,7 @@ class Akun extends CI_Controller {
         $id_user = $this->session->userdata("user_id");
 
         $data = array(
+            'title'     => 'Edit Profil | Si-RAPS',
             'data_user' => $this->m_akun->edit_profil($id_user)
         );
 

@@ -3,10 +3,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class M_kelola_user extends CI_Model
 {
-
     function tampil_user()
     {
-    	$data = $this->db->query("SELECT * from user");
+    	$data = $this->db->query("SELECT * FROM user");
 		return $data->result();
     }
 

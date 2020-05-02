@@ -33,11 +33,15 @@ class Login extends CI_Controller {
                 if ($checking != FALSE) {
                     foreach ($checking as $apps) {
                         $session_data = array(
-                            'user_id'   => $apps->id_user,
-                            'user_name' => $apps->username,
-                            'user_pass' => $apps->password,
-                            'user_nama' => $apps->nama,
-                            'level'     => $apps->level
+                            'user_id'       => $apps->id_user,
+                            'user_nama'     => $apps->nama,
+                            'user_nidn'     => $apps->nidn,
+                            'user_jabatan'  => $apps->jabatan,
+                            'pj_standar'    => $apps->penanggungjawab_standar,
+                            'user_homebase' => $apps->homebase,
+                            'user_name'     => $apps->username,
+                            'user_pass'     => $apps->password,
+                            'level'         => $apps->level,
                         );
 
                         $this->session->set_userdata($session_data);

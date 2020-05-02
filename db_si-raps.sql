@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 20, 2020 at 08:46 PM
+-- Generation Time: Apr 23, 2020 at 04:39 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -34,8 +34,23 @@ CREATE TABLE `dokumen` (
   `id_user` int(11) NOT NULL,
   `status_dokumen` varchar(16) NOT NULL,
   `tanggal_upload` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `tanggal_validasi` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `tanggal_validasi` datetime DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `dokumen`
+--
+
+INSERT INTO `dokumen` (`id_dokumen`, `standar`, `path`, `judul_dokumen`, `id_user`, `status_dokumen`, `tanggal_upload`, `tanggal_validasi`) VALUES
+(1, '1', 'path/test', 'Visi, Misi, Tujuan, dan Strategi', 4, 'Belum Divalidasi', '2020-04-22 22:32:42', NULL),
+(2, '2', 'path/test', 'Tata Pamong, Tata Kelola, dan Kerjasama', 5, 'Belum Divalidasi', '2020-04-23 14:38:32', NULL),
+(3, '3', 'path/test', 'Mahasiswa', 6, 'Belum Divalidasi', '2020-04-23 14:38:32', NULL),
+(4, '4', 'path/test', 'Sumber Daya Manusia', 7, 'Belum Divalidasi', '2020-04-23 14:38:32', NULL),
+(5, '5', 'path/test', 'Keuangan, Sarana, dan Prasarana', 8, 'Belum Divalidasi', '2020-04-23 14:38:32', NULL),
+(6, '6', 'path/test', 'Pendidikan', 9, 'Belum Divalidasi', '2020-04-23 14:38:32', NULL),
+(7, '7', 'path/test', 'Penelitian', 10, 'Belum Divalidasi', '2020-04-23 14:39:45', NULL),
+(8, '8', 'path/test', 'Pengabdian kepada Masyarakat', 11, 'Belum Divalidasi', '2020-04-23 14:39:45', NULL),
+(9, '9', 'path/test', 'Luaran dan Capaian Tridharma', 12, 'Belum Divalidasi', '2020-04-23 14:40:19', NULL);
 
 -- --------------------------------------------------------
 
@@ -67,7 +82,11 @@ INSERT INTO `user` (`id_user`, `nama`, `nidn`, `jabatan`, `penanggungjawab_stand
 (5, 'Mahrus Ali', '0716068601', 'Tenaga Pengajar', '2', 'S1 Teknik Informatika', 'tim2', 'tim', 'Tim Akreditasi'),
 (6, 'Indana Lazulfa', '0729079101', 'Tenaga Pengajar', '3', 'S1 Teknik Informatika', 'tim3', 'tim', 'Tim Akreditasi'),
 (7, 'Iftitaahul Mufarrihah', '0720059002', 'Tenaga Pengajar', '4', 'S1 Teknik Informatika', 'tim4', 'tim', 'Tim Akreditasi'),
-(8, 'Hadi Sucipto', '0705036801', 'Tenaga Pengajar', '5', 'D3 Sistem Informasi', 'tim5', 'tim', 'Tim Akreditasi');
+(8, 'Tim5', '0000000000', 'Tenaga Pengajar', '5', 'S1 Teknik Informatika', 'tim5', 'tim', 'Tim Akreditasi'),
+(9, 'Tim6', '0000000000', 'Tenaga Pengajar', '6', 'S1 Teknik Informatika', 'tim6', 'tim', 'Tim Akreditasi'),
+(10, 'Tim7', '0000000000', 'Tenaga Pengajar', '7', 'S1 Teknik Informatika', 'tim7', 'tim', 'Tim Akreditasi'),
+(11, 'Tim8', '0000000000', 'Tenaga Pengajar', '8', 'S1 Teknik Informatika', 'tim8', 'tim', 'Tim Akreditasi'),
+(12, 'Tim9', '0000000000', 'Tenaga Pengajar', '9', 'S1 Teknik Informatika', 'tim9', 'tim', 'Tim Akreditasi');
 
 --
 -- Indexes for dumped tables
@@ -94,12 +113,12 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `dokumen`
 --
 ALTER TABLE `dokumen`
-  MODIFY `id_dokumen` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_dokumen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- Constraints for dumped tables
 --
