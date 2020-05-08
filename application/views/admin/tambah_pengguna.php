@@ -13,7 +13,7 @@
 				<a href="<?php echo base_url() ?>admin/dokumen_akreditasi"><i class="fas fa-folder-open"></i> <span>Dokumen Akreditasi</span></a>
 			</li>
 			<li class="active">
-				<a href="<?php echo base_url() ?>admin/kelola_user"><i class="fas fa-user-cog"></i> <span>Kelola User</span></a>
+				<a href="<?php echo base_url() ?>admin/kelola_pengguna"><i class="fas fa-user-cog"></i> <span>Kelola Pengguna</span></a>
 			</li>
 			<li>
 				<a href="<?php echo base_url() ?>admin/akun"><i class="fas fa-user-circle"></i> <span>Akun</span></a>
@@ -24,10 +24,10 @@
 
 <div class="content-wrapper">
 	<section class="content-header">
-		<h1>Tambah User</h1>
+		<h1>Tambah Pengguna</h1>
 		<ol class="breadcrumb">
-		    <li><a href="<?php echo base_url() ?>admin/kelola_user"><i class="fa fa-tachometer-alt"></i> User</a></li>
-		    <li class="active">Tambah User</li>
+		    <li><a href="<?php echo base_url() ?>admin/kelola_pengguna"><i class="fa fa-tachometer-alt"></i> Pengguna</a></li>
+		    <li class="active">Tambah Pengguna</li>
 		</ol>
 	</section>
 	<section class="content">
@@ -35,7 +35,7 @@
 			<div class="col-md-12">
 			    <div class="box box-default">
 				    <div class="box-header with-border">
-				        <h3 class="box-title"><i class="fas fa-user-plus"></i> Tambah User</h3>
+				        <h3 class="box-title"><i class="fas fa-user-plus"></i> Tambah Pengguna</h3>
 				        <div class="box-tools pull-right">
 					        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
 					        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
@@ -43,7 +43,7 @@
 				    </div>
 				    <div class="box-body">
 					    <div class="row">
-					        <form class="form-horizontal" method="POST" action="<?php echo base_url() ?>admin/kelola_user/simpan_user">
+					        <form class="form-horizontal" method="POST" action="<?php echo base_url() ?>admin/kelola_pengguna/simpan_pengguna">
 					            <div class="col-md-6">
 					                <h4 style="text-align:right;"><i class="fas fa-id-card"></i> Informasi Pribadi</h4><hr>
 					                <div class="box-body">
@@ -78,10 +78,10 @@
 							                </div>
 							            </div>
 							            <div class="form-group">
-							                <label class="col-sm-4 control-label">Penanggungjawab Standar</label>
+							                <label class="col-sm-4 control-label">Penanggungjawab Kriteria</label>
 							                <div class="col-sm-8">
-								                <select name="fpenanggungjawab_standar" class="form-control" required>
-								                    <option value="">-- Penanggungjawab Standar --</option>
+								                <select name="fid_kriteria" class="form-control" required>
+								                    <option value="">-- Penanggungjawab Kriteria --</option>
 								                    <option value="1">1. Visi, Misi, Tujuan, dan Strategi</option>
 								                    <option value="2">2. Tata Pamong, Tata Kelola, dan Kerjasama</option>
 								                    <option value="3">3. Mahasiswa</option>
@@ -91,6 +91,7 @@
 								                    <option value="7">7. Penelitian</option>
 								                    <option value="8">8. Pengabdian kepada Masyarakat</option>
 								                    <option value="9">9. Luaran dan Capaian Tridharma</option>
+								                    <option value="0">Tidak Ada</option>
 								                </select>
 							                </div>
 							            </div>
@@ -123,18 +124,18 @@
 							                </div>
 							            </div>
 							            <div class="form-group">
-							                <label class="col-sm-4 control-label">Level</label>
+							                <label class="col-sm-4 control-label">Hak Akses</label>
 							                <div class="col-sm-8">
-								                <select name="flevel" class="form-control" required>
-								                    <option value="">-- Level --</option>
-								                    <option value="Kaprodi">Kaprodi</option>
-								                    <option value="Tim Akreditasi">Tim Akreditasi</option>
+								                <select name="fhak_akses" class="form-control" required>
+								                    <option value="">-- Hak Akses --</option>
+								                    <option value="3">Kaprodi</option>
+								                    <option value="2">Tim Akreditasi</option>
 								                </select>
 							                </div>
 							            </div>
 						            </div>
 						            <div class="box-footer pull-right">
-							            <input type="reset" class="btn btn-default" value="Batal">
+							            <input type="reset" class="btn btn-default" value="Reset">
 							            <input type="submit" name="submit" class="btn btn-info" value="Simpan">
 						            </div>
 						        </div>

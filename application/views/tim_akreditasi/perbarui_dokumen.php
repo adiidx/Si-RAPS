@@ -12,41 +12,41 @@
 			</li>
 			<li class="active">
 			<?php 
-			    if($this->session->userdata("pj_standar") == "1"){
+			    if($this->session->userdata("sess_id_kriteria") == "1"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_1"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_1"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
-			    }else if($this->session->userdata("pj_standar") == "2"){
+			    }else if($this->session->userdata("sess_id_kriteria") == "2"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_2"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_2"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
-			    }else if($this->session->userdata("pj_standar") == "3"){
+			    }else if($this->session->userdata("sess_id_kriteria") == "3"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_3"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_3"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
-			    }else if($this->session->userdata("pj_standar") == "4"){
+			    }else if($this->session->userdata("sess_id_kriteria") == "4"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_4"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_4"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
-			    }else if($this->session->userdata("pj_standar") == "5"){
+			    }else if($this->session->userdata("sess_id_kriteria") == "5"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_5"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_5"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
-			    }else if($this->session->userdata("pj_standar") == "6"){
+			    }else if($this->session->userdata("sess_id_kriteria") == "6"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_6"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_6"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
-			    }else if($this->session->userdata("pj_standar") == "7"){
+			    }else if($this->session->userdata("sess_id_kriteria") == "7"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_7"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_7"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
-			    }else if($this->session->userdata("pj_standar") == "8"){
+			    }else if($this->session->userdata("sess_id_kriteria") == "8"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_8"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_8"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
-			    }else if($this->session->userdata("pj_standar") == "9"){
+			    }else if($this->session->userdata("sess_id_kriteria") == "9"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_9"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_9"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
 			    }
 			?>
@@ -70,7 +70,7 @@
 		   	<div class="col-md-12">
 		   		<div class="box box-default">
 				    <div class="box-header with-border">
-				        <h3 class="box-title"><i class="fa fa-edit"></i> Perbarui Dokumen Standar <?php echo $this->session->userdata('pj_standar'); ?></h3>
+				        <h3 class="box-title"><i class="fa fa-edit"></i> Perbarui Dokumen Kriteria <?php echo $this->session->userdata('sess_id_kriteria'); ?></h3>
 				        <div class="box-tools pull-right">
 					        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
 					        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
@@ -98,22 +98,22 @@
 					                      	</div>
 					                    </div>
 					                    <div class="form-group">
-					                      	<label class="col-sm-4 control-label">Standar</label>
+					                      	<label class="col-sm-4 control-label">Kriteria</label>
 					                      	<div class="col-sm-8">
-					                        	<input type="text" name="fstandar" class="form-control" style="text-transform: capitalize;" value="<?php echo $this->session->userdata('pj_standar'); ?>" readonly>
+					                        	<input type="text" name="fkriteria" class="form-control" style="text-transform: capitalize;" value="<?php echo $this->session->userdata('sess_id_kriteria'); ?>" readonly>
 					                      	</div>
 					                    </div>
 							            <div class="form-group">
 							                <label class="col-sm-4 control-label">Penyusun</label>
 					                      	<div class="col-sm-8">
-					                        	<input type="hidden" name="fid_user" class="form-control" style="text-transform: capitalize;" value="<?php echo $this->session->userdata('user_id'); ?>" readonly>
-					                        	<input type="text" name="" class="form-control" style="text-transform: capitalize;" value="<?php echo $this->session->userdata('user_nama'); ?>" readonly>
+					                        	<input type="hidden" name="fpenyusun" class="form-control" style="text-transform: capitalize;" value="<?php echo $this->session->userdata('sess_id_auth'); ?>" readonly>
+					                        	<input type="text" name="" class="form-control" style="text-transform: capitalize;" value="<?php echo $session->nama; ?>" readonly>
 					                      	</div>
 							            </div>
 							            <div class="form-group">
 					                      	<label class="col-sm-4 control-label">NIDN</label>
 					                      	<div class="col-sm-8">
-					                        	<input type="text" name="" class="form-control" style="text-transform: capitalize;" value="<?php echo $this->session->userdata('user_nidn'); ?>" readonly>
+					                        	<input type="text" name="" class="form-control" style="text-transform: capitalize;" value="<?php echo $session->nidn; ?>" readonly>
 					                      	</div>
 					                    </div>
 							            <div class="box-footer pull-right">

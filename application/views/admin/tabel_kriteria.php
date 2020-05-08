@@ -13,7 +13,7 @@
 				<a href="<?php echo base_url() ?>admin/dokumen_akreditasi"><i class="fas fa-folder-open"></i> <span>Dokumen Akreditasi</span></a>
 			</li>
 			<li>
-				<a href="<?php echo base_url() ?>admin/kelola_user"><i class="fas fa-user-cog"></i> <span>Kelola User</span></a>
+				<a href="<?php echo base_url() ?>admin/kelola_pengguna"><i class="fas fa-user-cog"></i> <span>Kelola Pengguna</span></a>
 			</li>
 			<li>
 				<a href="<?php echo base_url() ?>admin/akun"><i class="fas fa-user-circle"></i> <span>Akun</span></a>
@@ -39,10 +39,10 @@
 					        <th><strong>No</strong></th>
 					        <th><strong>Judul Dokumen</strong></th>
 					        <th><strong>Nama Dokumen</strong></th>
-					        <th><strong>Author</strong></th>
+					        <th><strong>Penyusun</strong></th>
 					        <th><strong>Tanggal Upload</strong></th>
 					        <th><strong>Status Dokumen</strong></th>
-					        <th><strong>Validasi / Download</strong></th>
+					        <th><strong>Aksi</strong></th>
 					    </tr>
 				    </thead>
 				    <tbody>

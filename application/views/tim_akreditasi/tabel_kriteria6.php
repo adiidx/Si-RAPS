@@ -14,41 +14,41 @@
 			</li>
 			<li>
 			<?php 
-			    if($this->session->userdata("pj_standar") == "1"){
+			    if($this->session->userdata("sess_id_kriteria") == "1"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_1"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_1"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
-			    }else if($this->session->userdata("pj_standar") == "2"){
+			    }else if($this->session->userdata("sess_id_kriteria") == "2"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_2"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_2"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
-			    }else if($this->session->userdata("pj_standar") == "3"){
+			    }else if($this->session->userdata("sess_id_kriteria") == "3"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_3"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_3"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
-			    }else if($this->session->userdata("pj_standar") == "4"){
+			    }else if($this->session->userdata("sess_id_kriteria") == "4"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_4"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_4"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
-			    }else if($this->session->userdata("pj_standar") == "5"){
+			    }else if($this->session->userdata("sess_id_kriteria") == "5"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_5"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_5"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
-			    }else if($this->session->userdata("pj_standar") == "6"){
+			    }else if($this->session->userdata("sess_id_kriteria") == "6"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_6"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_6"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
-			    }else if($this->session->userdata("pj_standar") == "7"){
+			    }else if($this->session->userdata("sess_id_kriteria") == "7"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_7"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_7"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
-			    }else if($this->session->userdata("pj_standar") == "8"){
+			    }else if($this->session->userdata("sess_id_kriteria") == "8"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_8"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_8"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
-			    }else if($this->session->userdata("pj_standar") == "9"){
+			    }else if($this->session->userdata("sess_id_kriteria") == "9"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_9"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_9"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
 			    }
 			?>
@@ -72,7 +72,7 @@
 		<div class="row">
 		   	<div class="col-md-12">
 		   	<?php 
-			    if($this->session->userdata("pj_standar") == "5"){
+			    if($this->session->userdata("sess_id_kriteria") == "6"){
 			?>
 			        <a class="btn btn-success btn-md" href="<?php echo base_url() ?>tim_akreditasi/kelola_dokumen/upload_dokumen"><i class="fas fa-upload"></i> UPLOAD DOKUMEN</a><br><br>
 			<?php
@@ -86,10 +86,10 @@
 					        <th><strong>No</strong></th>
 					        <th><strong>Judul Dokumen</strong></th>
 					        <th><strong>Nama Dokumen</strong></th>
-					        <th><strong>Author</strong></th>
+					        <th><strong>Penyusun</strong></th>
 					        <th><strong>Tanggal Upload</strong></th>
 					        <th><strong>Status Dokumen</strong></th>
-					        <th width="50px"><strong>Aksi</strong></th>
+					        <th width="130px"><strong>Aksi</strong></th>
 					    </tr>
 				    </thead>
 				    <tbody>
@@ -125,18 +125,19 @@
 			                    	}
 			                    ?>
 			                    <?php 
-			                    	if($this->session->userdata("pj_standar") == "5"){
+			                    	if($this->session->userdata("sess_id_kriteria") == "6"){
 			                        	if($dokumen->status_dokumen == "Telah Disetujui"){
 			                    ?>
 			                            	<td style="text-align: center;">
-				                				<a class="btn btn-success btn-sm" href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/download_dokumen/<?php echo $dokumen->nama_dokumen; ?>"><i class="fas fa-download"></i><b> DOWNLOAD</b>
+				                				<a class="btn btn-success btn-sm" title="Download" href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/download_dokumen/<?php echo $dokumen->nama_dokumen; ?>"><i class="fas fa-download"></i><b> DOWNLOAD</b></a>
 					                    	</td>
 			                    <?php
 			                        	}else{
 			                    ?>
 				                            <td style="text-align: center;">
-						                        <a class="btn btn-primary btn-sm" href="<?php echo base_url() ?>tim_akreditasi/kelola_dokumen/perbarui_dokumen/<?php echo $dokumen->id_dokumen ?>"><i class="fa fa-edit"></i></a>
-					                			<a class="btn btn-danger btn-sm" href="<?php echo base_url() ?>tim_akreditasi/kelola_dokumen/hapus_dokumen/<?php echo $dokumen->id_dokumen ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><i class="fa fa-trash"></i></a>
+						                        <a class="btn btn-success btn-sm" title="Download" href='<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/download_dokumen/<?php echo $dokumen->nama_dokumen; ?>'><i class="fas fa-download"></i></a>
+						                    	<a class="btn btn-primary btn-sm" title="Perbarui" href="<?php echo base_url() ?>tim_akreditasi/kelola_dokumen/perbarui_dokumen/<?php echo $dokumen->id_dokumen ?>"><i class="fa fa-edit"></i></a>
+					                			<a class="btn btn-danger btn-sm" title="Hapus" href="<?php echo base_url() ?>tim_akreditasi/kelola_dokumen/hapus_dokumen/<?php echo $dokumen->id_dokumen ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><i class="fa fa-trash"></i></a>
 						                    </td>
 			                    <?php
 			                        	}
@@ -144,12 +145,12 @@
 			                        	if($dokumen->status_dokumen == "Telah Disetujui"){
 			                    ?>
 			                    			<td style="text-align: center;">
-				                				<a class="btn btn-success btn-sm" href='<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/download_dokumen/<?php echo $dokumen->nama_dokumen; ?>'><i class="fas fa-download"></i><b> DOWNLOAD</b>
+				                				<a class="btn btn-success btn-sm" title="Download" href='<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/download_dokumen/<?php echo $dokumen->nama_dokumen; ?>'><i class="fas fa-download"></i><b> DOWNLOAD</b></a>
 					                    	</td>
 					            <?php  
 					            		}else{
 					            ?>
-					            		<td></td>
+					            			<td></td>
 			                    <?php
 			                    		}
 			                        }

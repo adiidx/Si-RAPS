@@ -14,41 +14,41 @@
 			</li>
 			<li>
 			<?php 
-			    if($this->session->userdata("pj_standar") == "1"){
+			    if($this->session->userdata("sess_id_kriteria") == "1"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_1"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_1"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
-			    }else if($this->session->userdata("pj_standar") == "2"){
+			    }else if($this->session->userdata("sess_id_kriteria") == "2"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_2"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_2"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
-			    }else if($this->session->userdata("pj_standar") == "3"){
+			    }else if($this->session->userdata("sess_id_kriteria") == "3"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_3"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_3"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
-			    }else if($this->session->userdata("pj_standar") == "4"){
+			    }else if($this->session->userdata("sess_id_kriteria") == "4"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_4"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_4"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
-			    }else if($this->session->userdata("pj_standar") == "5"){
+			    }else if($this->session->userdata("sess_id_kriteria") == "5"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_5"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_5"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
-			    }else if($this->session->userdata("pj_standar") == "6"){
+			    }else if($this->session->userdata("sess_id_kriteria") == "6"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_6"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_6"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
-			    }else if($this->session->userdata("pj_standar") == "7"){
+			    }else if($this->session->userdata("sess_id_kriteria") == "7"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_7"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_7"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
-			    }else if($this->session->userdata("pj_standar") == "8"){
+			    }else if($this->session->userdata("sess_id_kriteria") == "8"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_8"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_8"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
-			    }else if($this->session->userdata("pj_standar") == "9"){
+			    }else if($this->session->userdata("sess_id_kriteria") == "9"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_9"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_9"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
 			    }
 			?>
@@ -72,109 +72,121 @@
 		    <div class="col-lg-4 col-xs-6">
 		     	<div class="small-box bg-light-blue">
 		       		<div class="inner">
-		       			<h3>Standar 1</h3>
+		       			<h3>Kriteria 1</h3>
 		      			<p>Visi, Misi, Tujuan, dan Strategi</p>
 		       		</div>
 		       		<div class="icon">
 		       			<i class="fas fa-bullseye" style="font-size:70px"></i>
 		       		</div>
-		       		<a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_1" class="small-box-footer">Lihat dokumen <i class="fa fa-arrow-circle-right"></i></a>
+		       		<a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_1" class="small-box-footer">Lihat dokumen <i class="fa fa-arrow-circle-right"></i></a>
 		     	</div>
 		    </div>
 		    <div class="col-lg-4 col-xs-6">
 		       	<div class="small-box bg-olive">
-		        	<div class="inner">
-		         		<h3>Standar 2</h3>
+		         	<div class="inner">
+		         		<h3>Kriteria 2</h3>
 		         		<p>Tata Pamong, Tata Kelola, dan Kerjasama</p>
 		         	</div>
 		         	<div class="icon">
 		         		<i class="fas fa-users" style="font-size:70px"></i>
 		         	</div>
-		         	<a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_2" class="small-box-footer">Lihat dokumen <i class="fa fa-arrow-circle-right"></i></a>
+		         	<a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_2" class="small-box-footer">Lihat dokumen <i class="fa fa-arrow-circle-right"></i></a>
 		       	</div>
 		    </div>
 		    <div class="col-lg-4 col-xs-6">
 		       	<div class="small-box bg-orange">
 		         	<div class="inner">
-		         		<h3>Standar 3</h3>
+		         		<h3>Kriteria 3</h3>
 		         		<p>Mahasiswa</p>
 		         	</div>
 		         	<div class="icon">
 		         		<i class="fas fa-user-graduate" style="font-size:70px"></i>
 		         	</div>
-		         	<a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_3" class="small-box-footer">Lihat dokumen <i class="fa fa-arrow-circle-right"></i></a>
+		         	<a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_3" class="small-box-footer">Lihat dokumen <i class="fa fa-arrow-circle-right"></i></a>
 		       	</div>
 		    </div>
 		    <div class="col-lg-4 col-xs-6">
 		       	<div class="small-box bg-blue">
 		         	<div class="inner">
-		         		<h3>Standar 4</h3>
+		         		<h3>Kriteria 4</h3>
 		         		<p>Sumber Daya Manusia</p>
 		         	</div>
 		         	<div class="icon">
 		         		<i class="fas fa-chalkboard-teacher" style="font-size:70px"></i>
 		         	</div>
-		         	<a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_4" class="small-box-footer">Lihat dokumen <i class="fa fa-arrow-circle-right"></i></a>
+		         	<a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_4" class="small-box-footer">Lihat dokumen <i class="fa fa-arrow-circle-right"></i></a>
 		       	</div>
 		    </div>
 		    <div class="col-lg-4 col-xs-6">
 		       	<div class="small-box bg-green">
 		         	<div class="inner">
-		         		<h3>Standar 5</h3>
+		         		<h3>Kriteria 5</h3>
 		         		<p>Keuangan, Sarana, dan Prasarana</p>
 		         	</div>
 		         	<div class="icon">
 		         		<i class="fas fa-money-check-alt" style="font-size:70px"></i>
 		         	</div>
-		         	<a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_5" class="small-box-footer">Lihat dokumen <i class="fa fa-arrow-circle-right"></i></a>
+		         	<a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_5" class="small-box-footer">Lihat dokumen <i class="fa fa-arrow-circle-right"></i></a>
 		       	</div>
 		    </div>
 		    <div class="col-lg-4 col-xs-6">
 		       	<div class="small-box bg-yellow">
 		         	<div class="inner">
-		         		<h3>Standar 6</h3>
+		         		<h3>Kriteria 6</h3>
 		         		<p>Pendidikan</p>
 		         	</div>
 		         	<div class="icon">
 		         		<i class="fas fa-graduation-cap" style="font-size:70px"></i>
 		         	</div>
-		         	<a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_6" class="small-box-footer">Lihat dokumen <i class="fa fa-arrow-circle-right"></i></a>
+		         	<a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_6" class="small-box-footer">Lihat dokumen <i class="fa fa-arrow-circle-right"></i></a>
 		       	</div>
 		    </div>
 		    <div class="col-lg-4 col-xs-6">
 		       	<div class="small-box bg-light-blue">
 		         	<div class="inner">
-		         		<h3>Standar 7</h3>
+		         		<h3>Kriteria 7</h3>
 		         		<p>Penelitian</p>
 		         	</div>
 		         	<div class="icon">
 		         		<i class="fab fa-researchgate" style="font-size:70px"></i>
 		         	</div>
-		         	<a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_7" class="small-box-footer">Lihat dokumen <i class="fa fa-arrow-circle-right"></i></a>
+		         	<a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_7" class="small-box-footer">Lihat dokumen <i class="fa fa-arrow-circle-right"></i></a>
 		       	</div>
 		    </div>
 		    <div class="col-lg-4 col-xs-6">
 		       	<div class="small-box bg-olive">
 		         	<div class="inner">
-		         		<h3>Standar 8</h3>
+		         		<h3>Kriteria 8</h3>
 		         		<p>Pengabdian kepada Masyarakat</p>
 		         	</div>
 		         	<div class="icon">
 		         		<i class="fas fa-people-carry" style="font-size:70px"></i>
 		         	</div>
-		         	<a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_8" class="small-box-footer">Lihat dokumen <i class="fa fa-arrow-circle-right"></i></a>
+		         	<a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_8" class="small-box-footer">Lihat dokumen <i class="fa fa-arrow-circle-right"></i></a>
 		       	</div>
 		    </div>
 		    <div class="col-lg-4 col-xs-6">
 		       	<div class="small-box bg-orange">
 		         	<div class="inner">
-		         		<h3>Standar 9</h3>
+		         		<h3>Kriteria 9</h3>
 		         		<p>Luaran dan Capaian Tridharma</p>
 		         	</div>
 		         	<div class="icon">
 		         		<i class="fas fa-address-book" style="font-size:70px"></i>
 		         	</div>
-		         	<a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_9" class="small-box-footer">Lihat dokumen <i class="fa fa-arrow-circle-right"></i></a>
+		         	<a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_9" class="small-box-footer">Lihat dokumen <i class="fa fa-arrow-circle-right"></i></a>
+		       	</div>
+		    </div>
+		    <div class="col-lg-4 col-xs-6">
+		       	<div class="small-box bg-red">
+		         	<div class="inner">
+		         		<h3>Dokumen</h3>
+		         		<h3>Pelengkap</h3>
+		         	</div>
+		         	<div class="icon">
+		         		<i class="fas fa-file-alt" style="font-size:70px"></i>
+		         	</div>
+		         	<a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/dokumen_pelengkap" class="small-box-footer">Lihat dokumen <i class="fa fa-arrow-circle-right"></i></a>
 		       	</div>
 		    </div>
 		</div>

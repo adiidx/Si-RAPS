@@ -14,41 +14,41 @@
 			</li>
 			<li>
 			<?php 
-			    if($this->session->userdata("pj_standar") == "1"){
+			    if($this->session->userdata("sess_id_kriteria") == "1"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_1"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_1"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
-			    }else if($this->session->userdata("pj_standar") == "2"){
+			    }else if($this->session->userdata("sess_id_kriteria") == "2"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_2"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_2"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
-			    }else if($this->session->userdata("pj_standar") == "3"){
+			    }else if($this->session->userdata("sess_id_kriteria") == "3"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_3"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_3"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
-			    }else if($this->session->userdata("pj_standar") == "4"){
+			    }else if($this->session->userdata("sess_id_kriteria") == "4"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_4"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_4"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
-			    }else if($this->session->userdata("pj_standar") == "5"){
+			    }else if($this->session->userdata("sess_id_kriteria") == "5"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_5"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_5"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
-			    }else if($this->session->userdata("pj_standar") == "6"){
+			    }else if($this->session->userdata("sess_id_kriteria") == "6"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_6"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_6"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
-			    }else if($this->session->userdata("pj_standar") == "7"){
+			    }else if($this->session->userdata("sess_id_kriteria") == "7"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_7"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_7"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
-			    }else if($this->session->userdata("pj_standar") == "8"){
+			    }else if($this->session->userdata("sess_id_kriteria") == "8"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_8"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_8"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
-			    }else if($this->session->userdata("pj_standar") == "9"){
+			    }else if($this->session->userdata("sess_id_kriteria") == "9"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/standar_9"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_9"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
 			    }
 			?>
@@ -69,107 +69,109 @@
 	</section>
 	<section class="content">
 		<div class="row">
-		   	<div class="col-md-1"></div>
-			<div class="col-md-6">
-			    <div class="box box-default">
-				    <div class="box-header with-border">
-				        <h3 class="box-title"><i class="fas fa-id-card"></i> Informasi Pribadi</h3>
-				        <div class="box-tools pull-right">
-					        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-					        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
-				        </div>
-				    </div>
-				    <div class="box-body">
-					    <div class="row">
-					        <form class="form-horizontal" method="POST" action="<?php echo base_url() ?>tim_akreditasi/akun/edit_profil">
-					            <div class="col-md-12">
-					                <div class="box-body">
-					                    <div class="form-group">
-					                      	<label class="col-sm-5 control-label" style="text-align: left;">Nama</label>
-					                      	<div class="col-sm-7">
-					                        	<label class="control-label" style="text-align: left;">:&nbsp;&nbsp;&nbsp;<?php echo $data_user->nama ?></label>
-					                      	</div>
-					                    </div>
-					                    <div class="form-group">
-					                      	<label class="col-sm-5 control-label" style="text-align: left;">NIDN</label>
-					                      	<div class="col-sm-7">
-					                        	<label class="control-label" style="text-align: left;">:&nbsp;&nbsp;&nbsp;<?php echo $data_user->nidn ?></label>
-					                      	</div>
-					                    </div>
-							            <div class="form-group">
-							                <label class="col-sm-5 control-label" style="text-align: left;">Jabatan</label>
-							                <div class="col-sm-7">
-					                        	<label class="control-label" style="text-align: left;">:&nbsp;&nbsp;&nbsp;<?php echo $data_user->jabatan ?></label>
-					                      	</div>
-							            </div>
-							            <div class="form-group">
-							                <label class="col-sm-5 control-label" style="text-align: left;">Penanggungjawab Standar</label>
-							                <div class="col-sm-7">
-					                        	<label class="control-label" style="text-align: left;">:&nbsp;&nbsp;&nbsp;<?php echo $data_user->penanggungjawab_standar ?></label>
-					                      	</div>
-							            </div>
-							            <div class="form-group">
-							                <label class="col-sm-5 control-label" style="text-align: left;">Homebase</label>
-							                <div class="col-sm-7">
-					                        	<label class="control-label" style="text-align: left;">:&nbsp;&nbsp;&nbsp;<?php echo $data_user->homebase ?></label>
-					                      	</div>
-							            </div>
-							            <div class="form-group">
-							                <label class="control-label"></label>
-							            </div>
-					                </div>
-					            </div>
+			<div class="col-md-12">
+				<?php if(isset($error)) { echo $error; }; ?>
+			   	<div class="col-md-1"></div>
+				<div class="col-md-6">
+				    <div class="box box-default">
+					    <div class="box-header with-border">
+					        <h3 class="box-title"><i class="fas fa-id-card"></i> Informasi Pribadi</h3>
+					        <div class="box-tools pull-right">
+						        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+						        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
+					        </div>
 					    </div>
-				    </div>
-				    <div class="box-footer"></div>
-				</div>
-			</div>
-			<div class="col-md-4">
-			    <div class="box box-default">
-				    <div class="box-header with-border">
-				        <h3 class="box-title"><i class="fas fa-user-circle"></i> Informasi Akun</h3>
-				        <div class="box-tools pull-right">
-					        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-					        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
-				        </div>
-				    </div>
-				    <div class="box-body">
-					    <div class="row">
-						        <div class="col-md-12">
-						            <div class="box-body">
-							            <div class="form-group">
-							                <label class="col-sm-4 control-label" style="text-align: left;">Username</label>
-							                <div class="col-sm-8">
-					                        	<label class="control-label" style="text-align: left;">:&nbsp;&nbsp;&nbsp;<?php echo $data_user->username ?></label>
-					                      	</div>
-							            </div><br><br>
-							            <div class="form-group">
-							                <label class="col-sm-4 control-label" style="text-align: left;">Password</label>
-							                <div class="col-sm-8">
-					                        	<label class="control-label" style="text-align: left;">:&nbsp;&nbsp;&nbsp;<?php echo $data_user->password ?></label>
-					                      	</div>
-							            </div><br><br>
-							            <div class="form-group">
-							                <label class="col-sm-4 control-label" style="text-align: left;">Level</label>
-							                <div class="col-sm-8">
-					                        	<label class="control-label" style="text-align: left;">:&nbsp;&nbsp;&nbsp;<?php echo $data_user->level ?></label>
-					                      	</div>
-							            </div><br><br>
-							            <div>
-							                <label class="control-label">&nbsp;&nbsp;&nbsp;</label>
-							            </div>
+					    <div class="box-body">
+						    <div class="row">
+						        <form class="form-horizontal" method="POST" action="<?php echo base_url() ?>tim_akreditasi/akun/edit_profil">
+						            <div class="col-md-12">
+						                <div class="box-body">
+						                    <div class="form-group">
+						                    	<div class="col-sm-1"></div>
+						                      	<label class="col-sm-3 control-label" style="text-align: left;">Nama</label>
+						                      	<div class="col-sm-8">
+						                        	<label class="control-label" style="text-align: left;">:&nbsp;&nbsp;&nbsp;<?php echo $data_pengguna->nama ?></label>
+						                      	</div>
+						                    </div>
+						                    <div class="form-group">
+						                    	<div class="col-sm-1"></div>
+						                      	<label class="col-sm-3 control-label" style="text-align: left;">NIDN</label>
+						                      	<div class="col-sm-8">
+						                        	<label class="control-label" style="text-align: left;">:&nbsp;&nbsp;&nbsp;<?php echo $data_pengguna->nidn ?></label>
+						                      	</div>
+						                    </div>
+								            <div class="form-group">
+						                    	<div class="col-sm-1"></div>
+								                <label class="col-sm-3 control-label" style="text-align: left;">Jabatan</label>
+								                <div class="col-sm-8">
+						                        	<label class="control-label" style="text-align: left;">:&nbsp;&nbsp;&nbsp;<?php echo $data_pengguna->jabatan ?></label>
+						                      	</div>
+								            </div>
+								            <div class="form-group">
+						                    	<div class="col-sm-1"></div>
+								                <label class="col-sm-3 control-label" style="text-align: left;">Penanggungjawab Kriteria</label>
+								                <div class="col-sm-8">
+						                        	<label class="control-label" style="text-align: left;">:&nbsp;&nbsp;&nbsp;<?php echo $data_auth->kriteria.". ".$kriteria->nama_kriteria ?></label>
+						                      	</div>
+								            </div>
+								            <div class="form-group">
+						                    	<div class="col-sm-1"></div>
+								                <label class="col-sm-3 control-label" style="text-align: left;">Homebase</label>
+								                <div class="col-sm-8">
+						                        	<label class="control-label" style="text-align: left;">:&nbsp;&nbsp;&nbsp;<?php echo $data_pengguna->homebase ?></label>
+						                      	</div>
+								            </div>
+						                </div>
 						            </div>
-						            <div class="box-footer pull-right">
-							            <input type="submit" name="submit" class="btn btn-success" value="Edit Profil">
-						            </div>
-						        </div>
-					        </form>
+						    </div>
 					    </div>
-				    </div>
-				    <div class="box-footer"></div>
+					    <div class="box-footer"></div>
+					</div>
 				</div>
+				<div class="col-md-4">
+				    <div class="box box-default">
+					    <div class="box-header with-border">
+					        <h3 class="box-title"><i class="fas fa-user-circle"></i> Informasi Akun</h3>
+					        <div class="box-tools pull-right">
+						        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+						        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
+					        </div>
+					    </div>
+					    <div class="box-body">
+						    <div class="row">
+							        <div class="col-md-12">
+							            <div class="box-body">
+								            <div class="form-group">
+								                <label class="col-sm-4 control-label" style="text-align: left;">Username</label>
+								                <div class="col-sm-8">
+						                        	<label class="control-label" style="text-align: left;">:&nbsp;&nbsp;&nbsp;<?php echo $data_auth->username ?></label>
+						                      	</div>
+								            </div><br><br>
+								            <div class="form-group">
+								                <label class="col-sm-4 control-label" style="text-align: left;">Password</label>
+								                <div class="col-sm-8">
+						                        	<label class="control-label" style="text-align: left;">:&nbsp;&nbsp;&nbsp;<?php echo $data_auth->password ?></label>
+						                      	</div>
+								            </div><br><br>
+								            <div class="form-group">
+								                <label class="col-sm-4 control-label" style="text-align: left;">Level</label>
+								                <div class="col-sm-8">
+						                        	<label class="control-label" style="text-align: left;">:&nbsp;&nbsp;&nbsp;<?php echo $hak_akses->hak_akses ?></label>
+						                      	</div>
+								            </div>
+							            </div>
+							            <div class="box-footer pull-right">
+								            <input type="submit" name="submit" class="btn btn-success" value="Edit Profil">
+							            </div>
+							        </div>
+						        </form>
+						    </div>
+					    </div>
+					    <div class="box-footer"></div>
+					</div>
+				</div>
+				<div class="col-md-1"></div>
 			</div>
-			<div class="col-md-1"></div>
 		</div>
 	</section>
 </div>

@@ -13,7 +13,7 @@
 				<a href="<?php echo base_url() ?>kaprodi/dokumen_akreditasi"><i class="fas fa-folder-open"></i> <span>Dokumen Akreditasi</span></a>
 			</li>
 			<li>
-				<a href="<?php echo base_url() ?>kaprodi/dokumen_akreditasi"><i class="fas fa-file-signature"></i> <span>Validasi Dokumen</span></a>
+				<a href="<?php echo base_url() ?>kaprodi/validasi_dokumen"><i class="fas fa-file-signature"></i> <span>Validasi Dokumen</span></a>
 			</li>
 			<li class="active">
 				<a href="<?php echo base_url() ?>kaprodi/akun"><i class="fas fa-user-circle"></i> <span>Akun</span></a>
@@ -48,15 +48,17 @@
 					            <div class="col-md-12">
 					                <div class="box-body">
 					                    <div class="form-group">
-					                      	<label class="col-sm-5 control-label" style="text-align: left;">Nama</label>
-					                      	<div class="col-sm-7">
-					                        	<input type="text" name="fnama" class="form-control" style="text-transform: capitalize;" value="<?php echo $data_user->nama ?>" required>
-					                        	<input type="hidden" name="id_user" value="<?php echo $data_user->id_user ?>">
+					                      	<div class="col-sm-1"></div>
+					                      	<label class="col-sm-3 control-label" style="text-align: left;">Nama</label>
+					                      	<div class="col-sm-8">
+					                        	<input type="text" name="fnama" class="form-control" style="text-transform: capitalize;" value="<?php echo $data_pengguna->nama ?>" required>
+					                        	<input type="hidden" name="id_pengguna" value="<?php echo $data_pengguna->id_pengguna ?>">
 					                      	</div>
 					                    </div>
 					                    <div class="form-group">
-					                      	<label class="col-sm-5 control-label" style="text-align: left;">NIDN</label>
-					                      	<div class="col-sm-7">
+					                      	<div class="col-sm-1"></div>
+					                      	<label class="col-sm-3 control-label" style="text-align: left;">NIDN</label>
+					                      	<div class="col-sm-8">
 					                        	<script>
 								                    function hanyaAngka(evt){
 									                    var charCode = (evt.which) ? evt.which : event.keyCode
@@ -65,23 +67,25 @@
 									                    return true;
 								                    }
 								                </script>
-					                        	<input type="text" name="fnidn" minlength="10" maxlength="10" onkeypress="return hanyaAngka(event)" class="form-control" value="<?php echo $data_user->nidn ?>" required>
+					                        	<input type="text" name="fnidn" minlength="10" maxlength="10" onkeypress="return hanyaAngka(event)" class="form-control" value="<?php echo $data_pengguna->nidn ?>" required>
 					                      	</div>
 					                    </div>
 							            <div class="form-group">
-							                <label class="col-sm-5 control-label" style="text-align: left;">Jabatan</label>
-							                <div class="col-sm-7">
-					                        	<input type="text" name="fjabatan" minlength="6" maxlength="20" class="form-control" value="<?php echo $data_user->jabatan ?>" readonly>
+					                      	<div class="col-sm-1"></div>
+							                <label class="col-sm-3 control-label" style="text-align: left;">Jabatan</label>
+							                <div class="col-sm-8">
+					                        	<input type="text" name="fjabatan" minlength="6" maxlength="20" class="form-control" value="<?php echo $data_pengguna->jabatan ?>" readonly>
 					                      	</div>
 							            </div>
 							            <div class="form-group">
-							                <label class="col-sm-5 control-label" style="text-align: left;">Homebase</label>
-							                <div class="col-sm-7">
+					                      	<div class="col-sm-1"></div>
+							                <label class="col-sm-3 control-label" style="text-align: left;">Homebase</label>
+							                <div class="col-sm-8">
 					                        	<select name="fhomebase" class="form-control" required>
 								                    <option value="">-- Homebase --</option>
-								                    <option value="S1 Teknik Informatika" <?php echo ($data_user->homebase == 'S1 Teknik Informatika' ? ' selected' : ''); ?>>S1 Teknik Informatika</option>
-								                    <option value="S1 Sistem Informasi" <?php echo ($data_user->homebase == 'S1 Sistem Informasi' ? ' selected' : ''); ?>>S1 Sistem Informasi</option>
-								                    <option value="D3 Sistem Informasi" <?php echo ($data_user->homebase == 'D3 Sistem Informasi' ? ' selected' : ''); ?>>D3 Sistem Informasi</option>
+								                    <option value="S1 Teknik Informatika" <?php echo ($data_pengguna->homebase == 'S1 Teknik Informatika' ? ' selected' : ''); ?>>S1 Teknik Informatika</option>
+								                    <option value="S1 Sistem Informasi" <?php echo ($data_pengguna->homebase == 'S1 Sistem Informasi' ? ' selected' : ''); ?>>S1 Sistem Informasi</option>
+								                    <option value="D3 Sistem Informasi" <?php echo ($data_pengguna->homebase == 'D3 Sistem Informasi' ? ' selected' : ''); ?>>D3 Sistem Informasi</option>
 								                </select>
 					                      	</div>
 							            </div>
@@ -108,19 +112,19 @@
 							            <div class="form-group">
 							                <label class="col-sm-4 control-label" style="text-align: left;">Username</label>
 							                <div class="col-sm-8">
-					                        	<input type="text" name="fusername" minlength="6" maxlength="20" class="form-control" value="<?php echo $data_user->username ?>" required>
+					                        	<input type="text" name="fusername" minlength="6" maxlength="20" class="form-control" value="<?php echo $data_auth->username ?>" required>
 					                      	</div>
 							            </div><br><br>
 							            <div class="form-group">
 							                <label class="col-sm-4 control-label" style="text-align: left;">Password</label>
 							                <div class="col-sm-8">
-					                        	<input type="text" name="fpassword" minlength="6" maxlength="20" class="form-control" value="<?php echo $data_user->password ?>" required>
+					                        	<input type="text" name="fpassword" minlength="6" maxlength="20" class="form-control" value="<?php echo $data_auth->password ?>" required>
 					                      	</div>
 							            </div><br><br>
 							            <div class="form-group">
 							                <label class="col-sm-4 control-label" style="text-align: left;">Level</label>
 							                <div class="col-sm-8">
-					                        	<input type="text" name="flevel" minlength="6" maxlength="20" class="form-control" value="<?php echo $data_user->level ?>" readonly>
+					                        	<input type="text" class="form-control" value="<?php echo $hak_akses->hak_akses ?>" readonly>
 					                      	</div>
 							            </div><br>
 						            </div>

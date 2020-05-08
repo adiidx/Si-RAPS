@@ -70,7 +70,7 @@
 		   	<div class="col-md-12">
 		   		<div class="box box-default">
 				    <div class="box-header with-border">
-				        <h3 class="box-title"><i class="fas fa-upload"></i> Upload Dokumen Kriteria <?php echo $this->session->userdata('sess_id_kriteria'); ?></h3>
+				        <h3 class="box-title"><i class="fas fa-upload"></i> Upload Dokumen Pelengkap</h3>
 				        <div class="box-tools pull-right">
 					        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
 					        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
@@ -78,7 +78,7 @@
 				    </div>
 				    <div class="box-body">
 					    <div class="row">
-					        <?php echo form_open_multipart('tim_akreditasi/kelola_dokumen/upload') ?>
+					        <?php echo form_open_multipart('tim_akreditasi/kelola_dokumen/upload_pelengkap') ?>
 					        	<div class="col-md-2"></div>
 					            <div class="col-md-8">
 					                <div class="box-body form-horizontal">
@@ -93,12 +93,6 @@
 					                      	<div class="col-sm-8">
 					                        	<input type="file" name="fnama_dokumen" class="form-control" required>
 					                        	<?php echo $error ?>
-					                      	</div>
-					                    </div>
-					                    <div class="form-group">
-					                      	<label class="col-sm-4 control-label">Kriteria</label>
-					                      	<div class="col-sm-8">
-					                        	<input type="text" name="fid_kriteria" class="form-control" style="text-transform: capitalize;" value="<?php echo $this->session->userdata('sess_id_kriteria'); ?>" readonly>
 					                      	</div>
 					                    </div>
 							            <div class="form-group">

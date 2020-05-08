@@ -13,7 +13,7 @@
 				<a href="<?php echo base_url() ?>admin/dokumen_akreditasi"><i class="fas fa-folder-open"></i> <span>Dokumen Akreditasi</span></a>
 			</li>
 			<li>
-				<a href="<?php echo base_url() ?>admin/kelola_user"><i class="fas fa-user-cog"></i> <span>Kelola User</span></a>
+				<a href="<?php echo base_url() ?>admin/kelola_pengguna"><i class="fas fa-user-cog"></i> <span>Kelola Pengguna</span></a>
 			</li>
 			<li class="active">
 				<a href="<?php echo base_url() ?>admin/akun"><i class="fas fa-user-circle"></i> <span>Akun</span></a>
@@ -48,26 +48,44 @@
 					            <div class="col-md-12">
 					                <div class="box-body">
 					                    <div class="form-group">
-					                      	<label class="col-sm-5 control-label" style="text-align: left;">Nama</label>
-					                      	<div class="col-sm-7">
-					                        	<input type="text" name="fnama" class="form-control" style="text-transform: capitalize;" value="<?php echo $data_user->nama ?>" required>
-					                        	<input type="hidden" name="id_user" value="<?php echo $data_user->id_user ?>">
+					                    	<div class="col-sm-1"></div>
+					                      	<label class="col-sm-3 control-label" style="text-align: left;">Nama</label>
+					                      	<div class="col-sm-8">
+					                        	<input type="text" name="fnama" class="form-control" style="text-transform: capitalize;" value="<?php echo $data_pengguna->nama ?>" required>
+					                        	<input type="hidden" name="id_pengguna" value="<?php echo $data_pengguna->id_pengguna ?>">
+					                      	</div>
+					                    </div>
+					                    <div class="form-group">
+					                      	<div class="col-sm-1"></div>
+					                      	<label class="col-sm-3 control-label" style="text-align: left;">NIDN</label>
+					                      	<div class="col-sm-8">
+					                        	<input type="text" name="fnidn" minlength="1" maxlength="10" class="form-control" value="<?php echo $data_pengguna->nidn ?>">
 					                      	</div>
 					                    </div>
 							            <div class="form-group">
-							                <label class="col-sm-5 control-label" style="text-align: left;">Jabatan</label>
-							                <div class="col-sm-7">
-					                        	<input type="text" name="fjabatan" minlength="6" maxlength="20" class="form-control" value="<?php echo $data_user->jabatan ?>" readonly>
+					                    	<div class="col-sm-1"></div>
+							                <label class="col-sm-3 control-label" style="text-align: left;">Jabatan</label>
+							                <div class="col-sm-8">
+					                        	<select name="fjabatan" class="form-control" required>
+								                    <option value="">-- Jabatan --</option>
+								                    <option value="Kepala Tata Usaha" <?php echo ($data_pengguna->jabatan == 'Kepala Tata Usaha' ? ' selected' : ''); ?>>Kepala Tata Usaha</option>
+								                    <option value="Staf Tata Usaha" <?php echo ($data_pengguna->jabatan == 'Staf Tata Usaha' ? ' selected' : ''); ?>>Staf Tata Usaha</option>
+								                    <option value="Tenaga Pengajar" <?php echo ($data_pengguna->jabatan == 'Tenaga Pengajar' ? ' selected' : ''); ?>>Tenaga Pengajar</option>
+								                </select>
 					                      	</div>
 							            </div>
 							            <div class="form-group">
-							                <label class="col-sm-5 control-label" style="text-align: left;">Homebase</label>
-							                <div class="col-sm-7">
-					                        	<input type="text" name="fhomebase" minlength="6" maxlength="20" class="form-control" value="<?php echo $data_user->homebase ?>" readonly>
+					                    	<div class="col-sm-1"></div>
+							                <label class="col-sm-3 control-label" style="text-align: left;">Homebase</label>
+							                <div class="col-sm-8">
+					                        	<select name="fhomebase" class="form-control" required>
+								                    <option value="">-- Homebase --</option>
+								                    <option value="S1 Teknik Informatika" <?php echo ($data_pengguna->homebase == 'S1 Teknik Informatika' ? ' selected' : ''); ?>>S1 Teknik Informatika</option>
+								                    <option value="S1 Sistem Informasi" <?php echo ($data_pengguna->homebase == 'S1 Sistem Informasi' ? ' selected' : ''); ?>>S1 Sistem Informasi</option>
+								                    <option value="D3 Sistem Informasi" <?php echo ($data_pengguna->homebase == 'D3 Sistem Informasi' ? ' selected' : ''); ?>>D3 Sistem Informasi</option>
+								                    <option value="Fakultas Teknologi Informasi" <?php echo ($data_pengguna->homebase == 'Fakultas Teknologi Informasi' ? ' selected' : ''); ?>>Fakultas Teknologi Informasi</option>
+								                </select>
 					                      	</div>
-							            </div><br>
-							            <div>
-							                <label class="control-label">&nbsp;&nbsp;&nbsp;</label>
 							            </div>
 					                </div>
 					            </div>
@@ -92,19 +110,19 @@
 							            <div class="form-group">
 							                <label class="col-sm-4 control-label" style="text-align: left;">Username</label>
 							                <div class="col-sm-8">
-					                        	<input type="text" name="fusername" minlength="6" maxlength="20" class="form-control" value="<?php echo $data_user->username ?>" required>
+					                        	<input type="text" name="fusername" minlength="6" maxlength="20" class="form-control" value="<?php echo $data_auth->username ?>" required>
 					                      	</div>
 							            </div><br><br>
 							            <div class="form-group">
 							                <label class="col-sm-4 control-label" style="text-align: left;">Password</label>
 							                <div class="col-sm-8">
-					                        	<input type="text" name="fpassword" minlength="6" maxlength="20" class="form-control" value="<?php echo $data_user->password ?>" required>
+					                        	<input type="text" name="fpassword" minlength="6" maxlength="20" class="form-control" value="<?php echo $data_auth->password ?>" required>
 					                      	</div>
 							            </div><br><br>
 							            <div class="form-group">
 							                <label class="col-sm-4 control-label" style="text-align: left;">Level</label>
 							                <div class="col-sm-8">
-					                        	<input type="text" name="flevel" minlength="6" maxlength="20" class="form-control" value="<?php echo $data_user->level ?>" readonly>
+					                        	<input type="text" class="form-control" value="<?php echo $hak_akses->hak_akses ?>" readonly>
 					                      	</div>
 							            </div>
 						            </div>

@@ -13,44 +13,40 @@ class Login extends CI_Controller {
     {
         if($this->m_login->is_logged_in())
         {
-            if($this->session->userdata("level") == "Admin"){
+            if($this->session->userdata("sess_id_hak_akses") == "1"){
                 redirect('admin/dokumen_akreditasi/');
-            }else if($this->session->userdata("level") == "Tim Akreditasi"){
+            }else if($this->session->userdata("sess_id_hak_akses") == "2"){
                 redirect('tim_akreditasi/dokumen_akreditasi/');
-            }else if($this->session->userdata("level") == "Kaprodi"){
+            }else if($this->session->userdata("sess_id_hak_akses") == "3"){
                 redirect('kaprodi/dokumen_akreditasi/');
             }
         }else{
-            $this->form_validation->set_rules('username', 'Username', 'required');
-            $this->form_validation->set_rules('password', 'Password', 'required');
+            $this->form_validation->set_rules('fusername', 'Username', 'required');
+            $this->form_validation->set_rules('fpassword', 'Password', 'required');
 
             if ($this->form_validation->run() == TRUE) {
-                $username = $this->input->post("username", TRUE);
-                $password = $this->input->post("password", TRUE);
+                $username = $this->input->post("fusername", TRUE);
+                $password = $this->input->post("fpassword", TRUE);
 
-                $checking = $this->m_login->cek_login('user', array('username' => $username), array('password' => $password));
+                $cek_auth = $this->m_login->cek_login('auth', array('username' => $username), array('password' => $password));
 
-                if ($checking != FALSE) {
-                    foreach ($checking as $apps) {
+                if ($cek_auth != FALSE) {
+                    foreach ($cek_auth as $auth) {
                         $session_data = array(
-                            'user_id'       => $apps->id_user,
-                            'user_nama'     => $apps->nama,
-                            'user_nidn'     => $apps->nidn,
-                            'user_jabatan'  => $apps->jabatan,
-                            'pj_standar'    => $apps->penanggungjawab_standar,
-                            'user_homebase' => $apps->homebase,
-                            'user_name'     => $apps->username,
-                            'user_pass'     => $apps->password,
-                            'level'         => $apps->level,
+                            'sess_id_auth'      => $auth->id_auth,
+                            'sess_id_kriteria'  => $auth->kriteria,
+                            'sess_username'     => $auth->username,
+                            'sess_password'     => $auth->password,
+                            'sess_id_hak_akses' => $auth->id_hak_akses
                         );
 
                         $this->session->set_userdata($session_data);
 
-                        if($this->session->userdata("level") == "Admin"){
+                        if($this->session->userdata("sess_id_hak_akses") == "1"){
                             redirect('admin/dokumen_akreditasi/');
-                        }else if($this->session->userdata("level") == "Tim Akreditasi"){
+                        }else if($this->session->userdata("sess_id_hak_akses") == "2"){
                             redirect('tim_akreditasi/dokumen_akreditasi/');
-                        }else if($this->session->userdata("level") == "Kaprodi"){
+                        }else if($this->session->userdata("sess_id_hak_akses") == "3"){
                             redirect('kaprodi/dokumen_akreditasi/');
                         }
                     }

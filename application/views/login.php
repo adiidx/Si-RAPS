@@ -28,14 +28,14 @@
             <div class="input-group-prepend">
               <span class="input-group-text"><i class="fas fa-user"></i></span>
             </div>
-            <input type="text" class="form-control" name="username" placeholder="Masukkan Username Anda" required autofocus> 
+            <input type="text" class="form-control" name="fusername" placeholder="Masukkan Username Anda" required autofocus> 
             <?php echo form_error('username'); ?>     
           </div>
           <div class="input-group form-group">
             <div class="input-group-prepend">
               <span class="input-group-text"><i class="fas fa-key"></i></span>
             </div>
-            <input type="password" class="form-control" name="password" placeholder="Masukkan Password Anda" required>
+            <input type="password" class="form-control" name="fpassword" placeholder="Masukkan Password Anda" required>
             <?php echo form_error('password'); ?>
           </div><br>
           <div class="form-group">

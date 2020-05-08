@@ -2,134 +2,206 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Dokumen_akreditasi extends CI_Controller {
-    public function __construct()
+    function __construct()
     {
         parent::__construct();
         $this->load->model('m_login');
-        if($this->m_login->is_level() != "Kaprodi"){
+        if($this->m_login->is_level() != "3"){
             redirect("login/");
         }
     }
 
-    public function index()
+    function index()
     {
-        $data['title']  = 'Dokumen Akreditasi | Si-RAPS';
+        $this->load->model('m_dokumen_akreditasi');
 
-        $this->load->view("kaprodi/dokumen_akreditasi", $data);         
+        $id_session     = $this->session->userdata("sess_id_auth");
+        $id_hak_akses   = $this->session->userdata("sess_id_hak_akses");
+
+        $data = array(
+            'title'     => 'Dokumen Akreditasi | Si-RAPS',
+            'session'   => $this->m_dokumen_akreditasi->tampil_session($id_session),
+            'hak_akses' => $this->m_dokumen_akreditasi->tampil_hak_akses($id_hak_akses)
+        );
+
+        $this->load->view('kaprodi/dokumen_akreditasi', $data);
     }
 
-    public function download_dokumen($nama_dokumen)
+    function download_dokumen($nama_dokumen)
     {
         $data = $this->db->get_where('dokumen',['nama_dokumen'=>$nama_dokumen])->row();
 
         force_download('uploads/dokumen/'.$data->nama_dokumen, NULL);
     }
 
-    public function standar_1()
+    function download_dokumen_pelengkap($nama_dokumen)
+    {
+        $data = $this->db->get_where('dokumen_pelengkap',['nama_dokumen'=>$nama_dokumen])->row();
+
+        force_download('uploads/dokumen/'.$data->nama_dokumen, NULL);
+    }
+    
+
+
+
+
+    function dokumen_pelengkap()
     {
         $this->load->model('m_dokumen_akreditasi');
 
-        $data['title']      = 'Standar 1 | Si-RAPS';
-        $data['header']     = 'Dokumen Standar 1';
+        $id_session     = $this->session->userdata("sess_id_auth");
+        $id_hak_akses   = $this->session->userdata("sess_id_hak_akses");
 
-        $data['data_dokumen'] = $this->m_dokumen_akreditasi->tampil_standar_1();
+        $data['title']          = 'Dokumen Pelengkap | Si-RAPS';
+        $data['header']         = 'Dokumen Pelengkap';
+        $data['session']        = $this->m_dokumen_akreditasi->tampil_session($id_session);
+        $data['hak_akses']      = $this->m_dokumen_akreditasi->tampil_hak_akses($id_hak_akses);
+        $data['data_dokumen']   = $this->m_dokumen_akreditasi->tampil_dokumen_pelengkap();
 
-        $this->load->view("kaprodi/tabel_standar1", $data);      
+        $this->load->view("kaprodi/tabel_dokumen_pelengkap", $data);      
     }
 
-    public function standar_2()
+    function kriteria_1()
     {
         $this->load->model('m_dokumen_akreditasi');
 
-        $data['title']      = 'Standar 2 | Si-RAPS';
-        $data['header']     = 'Dokumen Standar 2';
+        $id_session     = $this->session->userdata("sess_id_auth");
+        $id_hak_akses   = $this->session->userdata("sess_id_hak_akses");
 
-        $data['data_dokumen'] = $this->m_dokumen_akreditasi->tampil_standar_2();
+        $data['title']          = 'Kriteria 1 | Si-RAPS';
+        $data['header']         = 'Dokumen Kriteria 1';
+        $data['session']        = $this->m_dokumen_akreditasi->tampil_session($id_session);
+        $data['hak_akses']      = $this->m_dokumen_akreditasi->tampil_hak_akses($id_hak_akses);
+        $data['data_dokumen']   = $this->m_dokumen_akreditasi->tampil_kriteria_1();
 
-        $this->load->view("kaprodi/tabel_standar2", $data);      
+        $this->load->view("kaprodi/tabel_kriteria", $data);      
     }
 
-    public function standar_3()
+    function kriteria_2()
     {
         $this->load->model('m_dokumen_akreditasi');
 
-        $data['title']      = 'Standar 3 | Si-RAPS';
-        $data['header']     = 'Dokumen Standar 3';
+        $id_session     = $this->session->userdata("sess_id_auth");
+        $id_hak_akses   = $this->session->userdata("sess_id_hak_akses");
 
-        $data['data_dokumen'] = $this->m_dokumen_akreditasi->tampil_standar_3();
+        $data['title']          = 'Kriteria 2 | Si-RAPS';
+        $data['header']         = 'Dokumen Kriteria 2';
+        $data['session']        = $this->m_dokumen_akreditasi->tampil_session($id_session);
+        $data['hak_akses']      = $this->m_dokumen_akreditasi->tampil_hak_akses($id_hak_akses);
+        $data['data_dokumen']   = $this->m_dokumen_akreditasi->tampil_kriteria_2();
 
-        $this->load->view("kaprodi/tabel_standar3", $data);      
+        $this->load->view("kaprodi/tabel_kriteria", $data);      
     }
 
-    public function standar_4()
+    function kriteria_3()
     {
         $this->load->model('m_dokumen_akreditasi');
 
-        $data['title']      = 'Standar 4 | Si-RAPS';
-        $data['header']     = 'Dokumen Standar 4';
+        $id_session     = $this->session->userdata("sess_id_auth");
+        $id_hak_akses   = $this->session->userdata("sess_id_hak_akses");
 
-        $data['data_dokumen'] = $this->m_dokumen_akreditasi->tampil_standar_4();
+        $data['title']          = 'Kriteria 3 | Si-RAPS';
+        $data['header']         = 'Dokumen Kriteria 3';
+        $data['session']        = $this->m_dokumen_akreditasi->tampil_session($id_session);
+        $data['hak_akses']      = $this->m_dokumen_akreditasi->tampil_hak_akses($id_hak_akses);
+        $data['data_dokumen']   = $this->m_dokumen_akreditasi->tampil_kriteria_3();
 
-        $this->load->view("kaprodi/tabel_standar4", $data);      
+        $this->load->view("kaprodi/tabel_kriteria", $data);      
     }
 
-    public function standar_5()
+    function kriteria_4()
     {
         $this->load->model('m_dokumen_akreditasi');
 
-        $data['title']      = 'Standar 5 | Si-RAPS';
-        $data['header']     = 'Dokumen Standar 5';
+        $id_session     = $this->session->userdata("sess_id_auth");
+        $id_hak_akses   = $this->session->userdata("sess_id_hak_akses");
 
-        $data['data_dokumen'] = $this->m_dokumen_akreditasi->tampil_standar_5();
+        $data['title']          = 'Kriteria 4 | Si-RAPS';
+        $data['header']         = 'Dokumen Kriteria 4';
+        $data['session']        = $this->m_dokumen_akreditasi->tampil_session($id_session);
+        $data['hak_akses']      = $this->m_dokumen_akreditasi->tampil_hak_akses($id_hak_akses);
+        $data['data_dokumen']   = $this->m_dokumen_akreditasi->tampil_kriteria_4();
 
-        $this->load->view("kaprodi/tabel_standar5", $data);      
+        $this->load->view("kaprodi/tabel_kriteria", $data);      
     }
 
-    public function standar_6()
+    function kriteria_5()
     {
         $this->load->model('m_dokumen_akreditasi');
 
-        $data['title']      = 'Standar 6 | Si-RAPS';
-        $data['header']     = 'Dokumen Standar 6';
+        $id_session     = $this->session->userdata("sess_id_auth");
+        $id_hak_akses   = $this->session->userdata("sess_id_hak_akses");
 
-        $data['data_dokumen'] = $this->m_dokumen_akreditasi->tampil_standar_6();
+        $data['title']          = 'Kriteria 5 | Si-RAPS';
+        $data['header']         = 'Dokumen Kriteria 5';
+        $data['session']        = $this->m_dokumen_akreditasi->tampil_session($id_session);
+        $data['hak_akses']      = $this->m_dokumen_akreditasi->tampil_hak_akses($id_hak_akses);
+        $data['data_dokumen']   = $this->m_dokumen_akreditasi->tampil_kriteria_5();
 
-        $this->load->view("kaprodi/tabel_standar6", $data);      
+        $this->load->view("kaprodi/tabel_kriteria", $data);      
     }
 
-    public function standar_7()
+    function kriteria_6()
     {
         $this->load->model('m_dokumen_akreditasi');
 
-        $data['title']      = 'Standar 7 | Si-RAPS';
-        $data['header']     = 'Dokumen Standar 7';
+        $id_session     = $this->session->userdata("sess_id_auth");
+        $id_hak_akses   = $this->session->userdata("sess_id_hak_akses");
 
-        $data['data_dokumen'] = $this->m_dokumen_akreditasi->tampil_standar_7();
+        $data['title']          = 'Kriteria 6 | Si-RAPS';
+        $data['header']         = 'Dokumen Kriteria 6';
+        $data['session']        = $this->m_dokumen_akreditasi->tampil_session($id_session);
+        $data['hak_akses']      = $this->m_dokumen_akreditasi->tampil_hak_akses($id_hak_akses);
+        $data['data_dokumen']   = $this->m_dokumen_akreditasi->tampil_kriteria_6();
 
-        $this->load->view("kaprodi/tabel_standar7", $data);      
+        $this->load->view("kaprodi/tabel_kriteria", $data);      
     }
 
-    public function standar_8()
+    function kriteria_7()
     {
         $this->load->model('m_dokumen_akreditasi');
 
-        $data['title']      = 'Standar 8 | Si-RAPS';
-        $data['header']     = 'Dokumen Standar 8';
+        $id_session     = $this->session->userdata("sess_id_auth");
+        $id_hak_akses   = $this->session->userdata("sess_id_hak_akses");
 
-        $data['data_dokumen'] = $this->m_dokumen_akreditasi->tampil_standar_8();
+        $data['title']          = 'Kriteria 7 | Si-RAPS';
+        $data['header']         = 'Dokumen Kriteria 7';
+        $data['session']        = $this->m_dokumen_akreditasi->tampil_session($id_session);
+        $data['hak_akses']      = $this->m_dokumen_akreditasi->tampil_hak_akses($id_hak_akses);
+        $data['data_dokumen']   = $this->m_dokumen_akreditasi->tampil_kriteria_7();
 
-        $this->load->view("kaprodi/tabel_standar8", $data);      
+        $this->load->view("kaprodi/tabel_kriteria", $data);      
     }
 
-    public function standar_9()
+    function kriteria_8()
     {
         $this->load->model('m_dokumen_akreditasi');
 
-        $data['title']      = 'Standar 9 | Si-RAPS';
-        $data['header']     = 'Dokumen Standar 9';
+        $id_session     = $this->session->userdata("sess_id_auth");
+        $id_hak_akses   = $this->session->userdata("sess_id_hak_akses");
 
-        $data['data_dokumen'] = $this->m_dokumen_akreditasi->tampil_standar_9();
+        $data['title']          = 'Kriteria 8 | Si-RAPS';
+        $data['header']         = 'Dokumen Kriteria 8';
+        $data['session']        = $this->m_dokumen_akreditasi->tampil_session($id_session);
+        $data['hak_akses']      = $this->m_dokumen_akreditasi->tampil_hak_akses($id_hak_akses);
+        $data['data_dokumen']   = $this->m_dokumen_akreditasi->tampil_kriteria_8();
 
-        $this->load->view("kaprodi/tabel_standar9", $data);      
+        $this->load->view("kaprodi/tabel_kriteria", $data);      
+    }
+
+    function kriteria_9()
+    {
+        $this->load->model('m_dokumen_akreditasi');
+
+        $id_session     = $this->session->userdata("sess_id_auth");
+        $id_hak_akses   = $this->session->userdata("sess_id_hak_akses");
+
+        $data['title']          = 'Kriteria 9 | Si-RAPS';
+        $data['header']         = 'Dokumen Kriteria 9';
+        $data['session']        = $this->m_dokumen_akreditasi->tampil_session($id_session);
+        $data['hak_akses']      = $this->m_dokumen_akreditasi->tampil_hak_akses($id_hak_akses);
+        $data['data_dokumen']   = $this->m_dokumen_akreditasi->tampil_kriteria_9();
+
+        $this->load->view("kaprodi/tabel_kriteria", $data);      
     }
 }
