@@ -40,15 +40,6 @@
           </div><br>
           <div class="form-group">
             <div>
-              <font color="white" size="2">
-                Hint (username | password) :<br>
-                - admin | admin<br>
-                - tim5 | tim<br>
-                - kaprodi | kaprodi<br>
-                **Bagian ini akan dihapus jika sistem telah release
-              </font>
-            </div>
-            <div>
               <input type="submit" value="Login" class="btn float-right login_btn">
             </div>
           </div>

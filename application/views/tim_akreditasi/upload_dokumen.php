@@ -18,35 +18,35 @@
 			<?php
 			    }else if($this->session->userdata("sess_id_kriteria") == "2"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_2"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
 			    }else if($this->session->userdata("sess_id_kriteria") == "3"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_3"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
 			    }else if($this->session->userdata("sess_id_kriteria") == "4"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_4"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
 			    }else if($this->session->userdata("sess_id_kriteria") == "5"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_5"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
 			    }else if($this->session->userdata("sess_id_kriteria") == "6"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_6"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
 			    }else if($this->session->userdata("sess_id_kriteria") == "7"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_7"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
 			    }else if($this->session->userdata("sess_id_kriteria") == "8"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_8"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
 			    }else if($this->session->userdata("sess_id_kriteria") == "9"){
 			?>
-			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
+			        <a href="<?php echo base_url() ?>tim_akreditasi/dokumen_akreditasi/kriteria_9"><i class="fas fa-upload"></i> <span>Kelola Dokumen</span></a>
 			<?php
 			    }
 			?>

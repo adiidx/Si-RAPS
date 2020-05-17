@@ -1,7 +1,7 @@
 		<footer class="main-footer">
 			<div class="row">
 				<div class="col-md-6"><strong>Copyright &copy; 2020 <a href="<?php echo base_url() ?>" style="text-decoration:none">Si-RAPS</a>.</strong> All rights reserved.</div>
-				<div class="col-md-6" style="text-align: right;">Development Version</div>
+				<div class="col-md-6" style="text-align: right;">Beta Version</div>
 			</div>
 		</footer>
 	</div>
